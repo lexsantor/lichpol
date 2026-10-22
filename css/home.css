@@ -1061,8 +1061,8 @@
     max-width: 900px;
     margin-inline: 0;
     margin-bottom: 17px;
-    font-size: clamp(1.75rem, 10vw, 3.4rem);
-    letter-spacing: -.06em;
+    font-size: clamp(1.75rem, 9.2vw, 3.4rem);
+    letter-spacing: -.03em;
   }
 
   .home-hero__lead {
@@ -1266,24 +1266,25 @@
   }
 
   .home-community__image {
-    top: -120%;
+    top: 0;
     right: 0;
     bottom: auto;
     left: 0;
     width: 100%;
-    height: 220%;
-    object-position: 0% 100%;
+    height: 260px;
+    object-fit: cover;
+    object-position: 0% 50%;
   }
 
   .home-community__veil {
     background:
-      linear-gradient(180deg, rgba(13, 13, 14, .08) 0%, rgba(13, 13, 14, .24) 22%, rgba(13, 13, 14, .57) 40%, rgba(13, 13, 14, .9) 64%, rgba(13, 13, 14, .99) 100%),
+      linear-gradient(180deg, rgba(13, 13, 14, .08) 0, rgba(13, 13, 14, .08) 140px, var(--ink-900) 230px, var(--ink-900) 100%),
       linear-gradient(90deg, rgba(13, 13, 14, .7), rgba(13, 13, 14, .22));
   }
 
   .home-community__inner {
-    align-items: flex-end;
-    padding-block: 58px 44px;
+    align-items: flex-start;
+    padding-block: 230px 44px;
   }
 
   .home-community h2 {
@@ -1324,7 +1325,7 @@
     width: auto;
     margin-inline: 0;
     font-size: clamp(1.75rem, 8.75vw, 2.25rem);
-    letter-spacing: -.06em;
+    letter-spacing: -.03em;
   }
 
   .home-archive__source {

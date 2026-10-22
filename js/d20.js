@@ -24,10 +24,6 @@ if (trigger && die && faceNumber && panel && resultNumber && resultLabel && resu
     return supportsPopover ? panel.matches(':popover-open') : !panel.hidden;
   }
 
-  function restoreFocusIfNeeded() {
-    if (panel.contains(document.activeElement) || document.activeElement === document.body) trigger.focus();
-  }
-
   function hidePanel() {
     if (supportsPopover) {
       if (panelIsOpen()) panel.hidePopover();
@@ -119,8 +115,15 @@ if (trigger && die && faceNumber && panel && resultNumber && resultLabel && resu
   rollAgain.addEventListener('click', startRoll);
 
   if (supportsPopover) {
+    let wasFocusInside = false;
+    panel.addEventListener('beforetoggle', event => {
+      if (event.newState === 'closed') wasFocusInside = panel.contains(document.activeElement);
+    });
     panel.addEventListener('toggle', event => {
-      if (event.newState === 'closed') restoreFocusIfNeeded();
+      if (event.newState === 'closed') {
+        if (wasFocusInside) trigger.focus();
+        wasFocusInside = false;
+      }
     });
   } else {
     closeButton.addEventListener('click', hidePanel);
