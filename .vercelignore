@@ -1,0 +1,10 @@
+# Static deploy: only the public home and its assets.
+# Legacy V6 pages and docs stay in the repo but are not published (stale copy, see tasks/todo.md).
+*.html
+!index.html
+*.md
+docs/
+tests/
+tasks/
+references/
+.claude/
