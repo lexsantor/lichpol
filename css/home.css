@@ -202,7 +202,7 @@
 }
 
 .js .home-hero__step {
-  animation: home-hero-rise 520ms var(--ease-ritual) both;
+  animation: home-hero-rise 360ms var(--ease-ritual) both;
 }
 
 .home-hero__step--1 {
@@ -210,30 +210,34 @@
 }
 
 .home-hero__step--2 {
-  animation-delay: 80ms;
+  animation-delay: 60ms;
 }
 
 .home-hero__step--3 {
-  animation-delay: 160ms;
+  animation-delay: 120ms;
 }
 
 .home-hero__step--4 {
-  animation-delay: 240ms;
+  animation-delay: 180ms;
 }
 
 .home-hero__step--5 {
-  animation-delay: 320ms;
+  animation-delay: 240ms;
+}
+
+.home-hero__step--6 {
+  animation-delay: 300ms;
 }
 
 @keyframes home-hero-rise {
   from {
-    opacity: 0;
+    opacity: .35;
     transform: translateY(12px);
   }
 
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: none;
   }
 }
 
