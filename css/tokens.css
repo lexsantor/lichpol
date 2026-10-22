@@ -1,0 +1,37 @@
+/* LICHPOL V5 · Three layers: primitives → semantics → component */
+:root {
+  /* Primitive pigments */
+  --ink-950:#0D0D0E;--ink-900:#141315;--ink-850:#1C1918;--ink-800:#25201E;
+  --ink-700:#38302C;--ink-600:#5A4A40;--ash-500:#A69A89;
+  --bone-100:#F0E8DA;--bone-200:#DCD0BF;--bone-300:#C9BBA5;
+  --brass-300:#E4C48B;--brass-400:#D1AA66;--brass-500:#B88A48;--brass-700:#6D502E;
+  --rust-400:#CE765D;--rust-600:#9B4A39;--moss-400:#99B4A0;--moss-700:#365448;
+  --arcane-400:#AB98C8;--arcane-700:#483B59;
+  /* Semantic roles */
+  --canvas:var(--ink-950);--surface:var(--ink-900);--surface-raised:var(--ink-850);
+  --line:rgba(210,180,132,.18);--line-strong:rgba(218,183,129,.43);
+  --fg:var(--bone-100);--fg-muted:var(--bone-300);--fg-subtle:var(--ash-500);
+  --action:var(--brass-400);--action-fg:#17130E;
+  --positive:var(--moss-400);--negative:var(--rust-400);
+  --focus:var(--brass-300);--selection:rgba(184,138,72,.25);
+  /* Spacing & type */
+  --step-1:4px;--step-2:8px;--step-3:12px;--step-4:16px;--step-5:20px;
+  --step-6:24px;--step-8:32px;--step-10:40px;--step-12:48px;--step-16:64px;--step-24:96px;
+  --container:1200px;--reading:740px;--gutter:clamp(20px,4vw,48px);
+  --font-title: 'Cinzel','Palatino Linotype','Book Antiqua',Georgia,serif;
+  --font-ui: 'Inter','Segoe UI',Arial,sans-serif;
+  --font-story:'Cormorant Garamond','Palatino Linotype',Georgia,serif;
+  --text-xs:13px;--text-sm:14px;--text-base:16px;--text-lg:18px;--text-xl:22px;
+  --radius-xs:2px;--radius-sm:4px;--radius-md:8px;
+  --ease-out:cubic-bezier(.18,.65,.24,1);--ease-ritual:cubic-bezier(.2,.75,.24,1);
+  --quick:160ms;--normal:240ms;--reveal:620ms;
+  /* Intentional material recipes */
+  --material-leather:radial-gradient(ellipse at 20% 0%,rgba(144,88,49,.17),transparent 64%),repeating-linear-gradient(72deg,transparent 0 17px,rgba(251,219,167,.016) 18px 19px),linear-gradient(160deg,#31241C,#1D1817 67%,#151416);
+  --material-parchment:radial-gradient(ellipse at 15% 15%,rgba(255,249,210,.34),transparent 62%),radial-gradient(ellipse at 86% 89%,rgba(75,44,25,.21),transparent 52%),repeating-linear-gradient(5deg,transparent 0 11px,rgba(66,44,24,.015) 12px 13px),linear-gradient(132deg,#CCB88F,#9E8461 61%,#6C543E);
+  --material-wood:repeating-linear-gradient(93deg,transparent 0 32px,rgba(0,0,0,.17) 34px,transparent 38px,rgba(201,130,70,.05) 44px,transparent 54px),linear-gradient(170deg,#3F2C20,#221916 70%,#15110E);
+  --material-iron:linear-gradient(116deg,rgba(255,255,255,.09),transparent 32%,rgba(255,255,255,.025) 54%,transparent 80%),linear-gradient(160deg,#393B3B,#1D2022 61%,#111415);
+  --material-obsidian:radial-gradient(ellipse at 85% 10%,rgba(117,96,144,.2),transparent 44%),linear-gradient(145deg,#22202A,#111016 65%,#0E0C12);
+  /* Components */
+  --button-height:48px;--control-height:48px;--button-padding:20px;
+  --card-line:rgba(198,162,112,.24);--card-shadow:0 24px 52px rgba(0,0,0,.2);
+}

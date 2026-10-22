@@ -1,0 +1,4 @@
+references/
+.claude/
+node_modules/
+*.tgz
