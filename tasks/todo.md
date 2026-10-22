@@ -10,7 +10,7 @@ Plan: Fable blueprint (2026-10-22), authorized by Claude with changes noted belo
 | D3 | Single-page home with anchors; logo = Inicio; nav Campañas / El Dungeon Master / Crónicas / Comunidad + Twitch. | VERIFIED |
 | D4 | Legacy pages + .md docs kept in repo, excluded from deploy (.vercelignore): stale copy contradicts verified data. Reversible. | IMPLEMENTED, pending user acceptance |
 | D5 | Self-hosted OFL fonts (Cinzel 500/600, Inter variable, Cormorant 500 italic). 640/960w WebP variants. | VERIFIED |
-| D6 | No og:image / canonical until deploy URL exists; no schedule/counts/status anywhere. | VERIFIED |
+| D6 | og:image on the Vercel URL; no canonical until a domain is confirmed; no schedule/counts/status anywhere. | VERIFIED |
 
 ## Tasks
 - [x] T0 baseline commit, logo rename, .gitignore, .vercelignore, content verification log
@@ -29,7 +29,7 @@ Plan: Fable blueprint (2026-10-22), authorized by Claude with changes noted belo
 - Independent code review: no CRITICAL/HIGH; 4 of 5 findings fixed, 1 rejected (alt text describes the image, no factual claim).
 
 ## Not done / pending
-- og:image + canonical once the production URL/domain is confirmed.
+- og:image added for https://lichpol.vercel.app (assets/og-tavern.jpg, 1200x630). Update og:url/og:image and add canonical when a custom domain is attached.
 - Legacy V6 pages excluded from deploy; their copy is stale.
 - Real screen reader (NVDA/VoiceOver), Safari and Firefox not tested.
 

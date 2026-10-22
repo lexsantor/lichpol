@@ -1028,6 +1028,17 @@
   }
 }
 
+@media (min-width: 541px) and (max-width: 900px) {
+  .home-hero__image {
+    object-position: 67% 50%;
+  }
+
+  .home-hero__veil {
+    background:
+      linear-gradient(180deg, rgba(13, 13, 14, .14) 0%, rgba(13, 13, 14, .18) 40%, rgba(13, 13, 14, .82) 44%, rgba(13, 13, 14, .96) 54%, rgba(13, 13, 14, .99) 68%, rgba(13, 13, 14, 1) 100%);
+  }
+}
+
 @media (max-width: 540px) {
   .home-section {
     padding-block: 72px;
