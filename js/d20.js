@@ -51,6 +51,8 @@ if (trigger && die && faceNumber && panel && resultNumber && resultLabel && resu
     die.removeEventListener('animationend', animationHandler);
     die.classList.remove('is-rolling', 'is-fumble');
     faceNumber.classList.remove('is-revealing');
+    faceNumber.classList.toggle('is-natural-one', roll.value === 1);
+    faceNumber.classList.toggle('is-natural-twenty', roll.value === 20);
     faceNumber.textContent = String(roll.value);
     resultNumber.textContent = String(roll.value);
     resultLabel.textContent = roll.category.label;

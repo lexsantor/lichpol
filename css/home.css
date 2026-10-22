@@ -1057,12 +1057,12 @@
   }
 
   .home-hero h1 {
-    width: calc(100% + 32px);
+    width: auto;
     max-width: 900px;
-    margin-inline: -16px;
+    margin-inline: 0;
     margin-bottom: 17px;
-    font-size: clamp(2.4rem, 10.25vw, 3.4rem);
-    letter-spacing: -.04em;
+    font-size: clamp(1.75rem, 10vw, 3.4rem);
+    letter-spacing: -.06em;
   }
 
   .home-hero__lead {
@@ -1321,7 +1321,8 @@
   }
 
   .home-hero h1 {
-    width: calc(100% + 32px);
+    width: auto;
+    margin-inline: 0;
     font-size: clamp(1.75rem, 8.75vw, 2.25rem);
     letter-spacing: -.06em;
   }

@@ -11,9 +11,9 @@ export const CATEGORIES = Object.freeze([
 /** Immutable phrase banks keyed by category id. */
 export const PHRASES = Object.freeze({
   fumble: Object.freeze([
-    'Has sacado un 1. Hasta el cadáver del suelo ha sentido vergüenza ajena.',
+    'Hasta el cadáver del suelo ha sentido vergüenza ajena.',
     'Tu espada sale volando y, por algún motivo, aterriza en tu bota.',
-    'Pifia. El bardo ya está componiendo la canción. No es una canción heroica.',
+    'El bardo ya está componiendo la canción. No es una canción heroica.',
     'El dado no ha fallado: ha emitido un juicio.',
     'Has tropezado con tu propia sombra. La sombra ha pedido disculpas por ti.',
     'En algún plano lejano, un lich se ríe por primera vez en siglos.',
@@ -48,7 +48,7 @@ export const PHRASES = Object.freeze({
   ]),
   good: Object.freeze([
     'Impresionante. Por primera vez hoy, tu incompetencia no ha sido determinante.',
-    'Buena tirada. El bardo toma notas, por si acaso.',
+    'El bardo toma notas, por si acaso.',
     'Aciertas. El enemigo se replantea sus decisiones vitales.',
     'Hoy los dados te quieren. Mañana, ya veremos.',
     'Bien hecho. Disfrútalo: el Dungeon Master ya está reajustando el encuentro.',
@@ -56,9 +56,9 @@ export const PHRASES = Object.freeze({
     'Éxito. Que no se te suba a la cabeza: ahí ya llevas el sombrero.',
   ]),
   critical: Object.freeze([
-    'Crítico. Los dioses te favorecen. No te acostumbres, miserable.',
-    'Un 20 natural. Por un instante, eres la leyenda que dices ser en la taberna.',
-    'Crítico. Hasta el Dungeon Master ha dejado de sonreír.',
+    'Los dioses te favorecen. No te acostumbres, miserable.',
+    'Por un instante, eres la leyenda que dices ser en la taberna.',
+    'Hasta el Dungeon Master ha dejado de sonreír.',
     'Los dragones susurran tu nombre. Mal pronunciado, pero lo susurran.',
     'Guarda este dado. No volverá a pasar.',
     'El destino revisa sus papeles: esta vez estás en la lista buena.',

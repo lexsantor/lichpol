@@ -459,19 +459,21 @@
   <button class="d20-trigger" type="button" aria-label="Tirar el d20" aria-describedby="d20-hint" aria-busy="false" hidden>
     <span class="d20-die">
       <svg class="d20-die__art" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
-        <defs>
-          <linearGradient id="d20-material" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stop-color="var(--ink-800)"></stop>
-            <stop offset="100%" stop-color="var(--ink-950)"></stop>
-          </linearGradient>
-        </defs>
-        <path class="d20-die__body" d="M32 3 57 15v32L32 61 7 47V15Z"></path>
+        <path class="d20-die__body" d="M32 2 60 16l2 28-30 18L2 44l2-28Z"></path>
         <g class="d20-die__facets">
-          <path d="m32 3-14 14 14 9 14-9L32 3Zm-25 12 11 2 14 9-14 12L7 47V15Zm50 0-11 2-14 9 14 12 11 8V15ZM18 17l14 9 14-9M18 41l14 10 14-10M7 47l25 14 25-14M32 26v25M7 15l11 26M57 15 46 41"></path>
-          <path class="d20-die__highlight" d="M32 3 7 15m25-12 25 12M7 15v32"></path>
-          <path class="d20-die__face" d="m32 26-14 15h28L32 26Z"></path>
+          <path class="d20-die__face d20-die__face--lit" d="M32 2 4 16 32 14Z"></path>
+          <path class="d20-die__face d20-die__face--mid" d="M32 2 60 16 32 14Z"></path>
+          <path class="d20-die__face d20-die__face--lit" d="M4 16 32 14 14 49Z"></path>
+          <path class="d20-die__face d20-die__face--mid" d="M32 14 60 16 50 49Z"></path>
+          <path class="d20-die__face d20-die__face--mid" d="M32 14 14 49 50 49Z"></path>
+          <path class="d20-die__face d20-die__face--shadow" d="M14 49 50 49 32 62Z"></path>
+          <path class="d20-die__face d20-die__face--mid" d="M4 16 2 44 14 49Z"></path>
+          <path class="d20-die__face d20-die__face--shadow" d="M60 16 50 49 62 44Z"></path>
+          <path class="d20-die__face d20-die__face--shadow" d="M2 44 14 49 32 62Z"></path>
+          <path class="d20-die__face d20-die__face--deep" d="M50 49 62 44 32 62Z"></path>
+          <path class="d20-die__highlight" d="M32 2 4 16 2 44M32 14 14 49"></path>
         </g>
-        <text class="d20-die__number" id="d20-face-number" x="32" y="38">20</text>
+        <text class="d20-die__number is-natural-twenty" id="d20-face-number" x="32" y="41">20</text>
       </svg>
     </span>
     <span class="d20-tooltip" aria-hidden="true">Tira el dado. ¿Qué podría salir mal?</span>
