@@ -18,6 +18,7 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin href="assets/fonts/cinzel-latin-500.woff2">
   <link rel="stylesheet" href="css/site.css">
   <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/d20.css">
   <script>document.documentElement.classList.add('js')</script>
   <script defer src="js/site.js"></script>
   <script defer src="js/home.js"></script>
@@ -455,6 +456,42 @@
     </div>
   </footer>
 
-  <!-- D20: Cursed D20 widget mounts here (T3) -->
+  <button class="d20-trigger" type="button" aria-label="Tirar el d20" aria-describedby="d20-hint" aria-busy="false" hidden>
+    <span class="d20-die">
+      <svg class="d20-die__art" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+        <defs>
+          <linearGradient id="d20-material" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="var(--ink-800)"></stop>
+            <stop offset="100%" stop-color="var(--ink-950)"></stop>
+          </linearGradient>
+        </defs>
+        <path class="d20-die__body" d="M32 3 57 15v32L32 61 7 47V15Z"></path>
+        <g class="d20-die__facets">
+          <path d="m32 3-14 14 14 9 14-9L32 3Zm-25 12 11 2 14 9-14 12L7 47V15Zm50 0-11 2-14 9 14 12 11 8V15ZM18 17l14 9 14-9M18 41l14 10 14-10M7 47l25 14 25-14M32 26v25M7 15l11 26M57 15 46 41"></path>
+          <path class="d20-die__highlight" d="M32 3 7 15m25-12 25 12M7 15v32"></path>
+          <path class="d20-die__face" d="m32 26-14 15h28L32 26Z"></path>
+        </g>
+        <text class="d20-die__number" id="d20-face-number" x="32" y="38">20</text>
+      </svg>
+    </span>
+    <span class="d20-tooltip" aria-hidden="true">Tira el dado. ¿Qué podría salir mal?</span>
+    <span class="visually-hidden" id="d20-hint">Tira el dado. ¿Qué podría salir mal?</span>
+  </button>
+
+  <div class="d20-panel" id="d20-result" popover="auto" aria-labelledby="d20-result-label" hidden>
+    <p class="d20-panel__number"><span class="visually-hidden">Resultado: </span><span id="d20-result-number">20</span></p>
+    <h2 class="d20-panel__label" id="d20-result-label">Éxito crítico</h2>
+    <p class="d20-panel__phrase" id="d20-result-phrase"></p>
+    <div class="d20-panel__actions">
+      <button class="btn btn-secondary btn-sm" id="d20-roll-again" type="button">Volver a tirar</button>
+      <button class="d20-panel__close btn-icon" type="button" aria-label="Cerrar resultado" popovertarget="d20-result" popovertargetaction="hide">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="m6 6 12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+  <p class="visually-hidden" role="status" aria-live="polite" id="d20-live"></p>
+  <script type="module" src="js/d20.js"></script>
 </body>
 </html>
