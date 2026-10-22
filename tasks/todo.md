@@ -18,7 +18,7 @@ Plan: Fable blueprint (2026-10-22), authorized by Claude with changes noted belo
 - [x] T2 Codex: index.html + css/home.css
 - [x] T3 Codex: D20 UI (js/d20.js + styles)
 - [x] T4 Claude: QA 375/768/1024/1440, keyboard, reduced motion, links, console
-- [ ] T5 push GitHub, link Vercel project "lichpol", verify deploy
+- [x] T5 push GitHub, link Vercel project "lichpol", verify deploy (https://lichpol.vercel.app)
 
 ## QA evidence (2026-10-22, Chromium 153 via Playwright, local HTTP)
 - 320/375/768/1024/1440 (+ reduced motion at 375/1440): no horizontal scroll, 0 console errors, 0 failed requests, 0 broken images, 1 h1, 4 fonts loaded.
@@ -29,7 +29,13 @@ Plan: Fable blueprint (2026-10-22), authorized by Claude with changes noted belo
 - Independent code review: no CRITICAL/HIGH; 4 of 5 findings fixed, 1 rejected (alt text describes the image, no factual claim).
 
 ## Not done / pending
-- Lighthouse not run locally (to run on the deployed URL).
 - og:image + canonical once the production URL/domain is confirmed.
 - Legacy V6 pages excluded from deploy; their copy is stale.
 - Real screen reader (NVDA/VoiceOver), Safari and Firefox not tested.
+
+## Production (https://lichpol.vercel.app, commit eaed02f)
+- Public 200; per-deployment *.vercel.app URLs stay behind Vercel SSO (project setting).
+- Excluded from deploy, verified 404: legacy *.html, *.md, docs/, tasks/, tests/, references/, .env.local.
+- QA 320-1440 + reduced motion and d20 E2E 24/24 re-run on production: pass.
+- Lighthouse 12.8.2 (simulated throttling, this machine): mobile Perf 94 / 87 / 88 / 96, A11y 100, BP 100, SEO 100, CLS 0, LCP 2.6-3.5 s (target 2.5 s NOT met). Desktop 100/100/100/100, LCP 0.5 s.
+- LCP is render delay (fonts + CSS chain under simulated slow 4G), not network. A/B of the last perf commit vs previous: neutral (82 vs 81-82 locally). Next lever if needed: inline critical hero CSS.
