@@ -19,7 +19,7 @@
   --step-6:24px;--step-8:32px;--step-10:40px;--step-12:48px;--step-16:64px;--step-24:96px;
   --container:1200px;--reading:740px;--gutter:clamp(20px,4vw,48px);
   --font-title: 'Cinzel','Palatino Linotype','Book Antiqua',Georgia,serif;
-  --font-ui: 'Inter','Segoe UI',Arial,sans-serif;
+  --font-ui: 'DM Sans','Segoe UI',Arial,sans-serif;
   --font-story:'Cormorant Garamond','Palatino Linotype',Georgia,serif;
   --text-xs:13px;--text-sm:14px;--text-base:16px;--text-lg:18px;--text-xl:22px;
   --radius-xs:2px;--radius-sm:4px;--radius-md:8px;

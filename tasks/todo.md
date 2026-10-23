@@ -10,6 +10,7 @@ Plan: Fable blueprint (2026-10-22), authorized by Claude with changes noted belo
 | D3 | Single-page home with anchors; logo = Inicio; nav Campañas / El Dungeon Master / Crónicas / Comunidad + Twitch. | VERIFIED |
 | D4 | Legacy pages + .md docs kept in repo, excluded from deploy (.vercelignore): stale copy contradicts verified data. Reversible. | IMPLEMENTED, pending user acceptance |
 | D5 | Self-hosted OFL fonts (Cinzel 500/600, Inter variable, Cormorant 500 italic). 640/960w WebP variants. | VERIFIED |
+| D7 | Owner decisions 2026-10-23: Cinzel on nav, DM fact labels and archive campaign labels; hero credit and DM figcaption removed; UI font Inter -> DM Sans (tokens --font-ui); icons from Reicon (MIT, Solar Icons CC BY 4.0) as single-colour sprite. design.md still says Inter (not edited without authorization). | ACCEPTED (owner) |
 | D6 | og:image on the Vercel URL; no canonical until a domain is confirmed; no schedule/counts/status anywhere. | VERIFIED |
 
 ## Tasks

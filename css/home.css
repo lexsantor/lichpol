@@ -15,11 +15,11 @@
 }
 
 @font-face {
-  font-family: "Inter";
+  font-family: "DM Sans";
+  src: url("../assets/fonts/dm-sans-latin-wght.woff2") format("woff2");
+  font-weight: 100 1000;
   font-style: normal;
-  font-weight: 100 900;
   font-display: swap;
-  src: url("../assets/fonts/inter-latin-wght.woff2") format("woff2");
 }
 
 @font-face {
@@ -28,6 +28,38 @@
   font-weight: 500;
   font-display: swap;
   src: url("../assets/fonts/cormorant-garamond-latin-500-italic.woff2") format("woff2");
+}
+
+.icon {
+  width: 1em;
+  height: 1em;
+  flex: none;
+  display: inline-block;
+  vertical-align: -.125em;
+}
+
+.icon--external {
+  width: .85em;
+  height: .85em;
+  margin-left: -4px;
+}
+
+.home .icon:not(.icon--external) {
+  width: 1.05em;
+  height: 1.05em;
+}
+
+.home .btn {
+  gap: 8px;
+}
+
+.home .btn > .icon:not(.icon--external) {
+  width: 16px;
+  height: 16px;
+}
+
+.home .text-link {
+  gap: 8px;
 }
 
 :root {
@@ -62,7 +94,12 @@
 }
 
 .home-header .site-nav a {
+  font-family: var(--font-title);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: .04em;
   color: var(--bone-200);
+  text-transform: none;
 }
 
 .home-header .site-nav a:hover {
@@ -176,8 +213,8 @@
 
 .home-hero__channels a {
   display: inline-flex;
-  align-items: baseline;
-  gap: 6px;
+  align-items: center;
+  gap: 8px;
   color: var(--bone-200);
   font-size: 13px;
   font-weight: 500;
@@ -188,13 +225,6 @@
   color: var(--brass-300);
   text-decoration: underline;
   text-underline-offset: 4px;
-}
-
-.home-hero__credit {
-  margin-top: 16px;
-  color: var(--bone-300);
-  font-size: 12px;
-  line-height: 1.5;
 }
 
 .js .home-hero__image {
@@ -223,10 +253,6 @@
 
 .home-hero__step--5 {
   animation-delay: 240ms;
-}
-
-.home-hero__step--6 {
-  animation-delay: 300ms;
 }
 
 @keyframes home-hero-rise {
@@ -305,12 +331,6 @@
   object-fit: contain;
 }
 
-.home-dm__portrait figcaption {
-  margin-top: 13px;
-  color: var(--bone-200);
-  font: 500 italic 18px/1.4 var(--font-story);
-}
-
 .home-dm__copy {
   min-width: 0;
 }
@@ -353,8 +373,9 @@
 
 .home-dm__facts dt {
   color: var(--bone-300);
-  font-size: 13px;
-  font-weight: 600;
+  font: 600 13px/1.5 var(--font-title);
+  letter-spacing: .04em;
+  text-transform: none;
 }
 
 .home-dm__facts dd {
@@ -366,6 +387,9 @@
 }
 
 .home-inline-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   color: var(--brass-300);
   text-decoration: underline;
   text-decoration-color: var(--line-strong);
@@ -646,8 +670,8 @@
 
 .home-worlds__index a {
   display: inline-flex;
-  align-items: baseline;
-  gap: 5px;
+  align-items: center;
+  gap: 8px;
   color: var(--bone-200);
   font-size: 13px;
   text-decoration: underline;
@@ -758,9 +782,9 @@
 
 .home-archive__campaign {
   color: var(--bone-300);
-  font-size: 12px;
-  font-weight: 600;
-  line-height: 1.5;
+  font: 600 13px/1.5 var(--font-title);
+  letter-spacing: .04em;
+  text-transform: none;
 }
 
 .home-archive__title {
@@ -772,19 +796,17 @@
 .home-archive__source {
   display: inline-flex;
   align-items: center;
-  gap: 5px;
+  gap: 8px;
   color: var(--bone-300);
   font-size: 12px;
   white-space: nowrap;
 }
 
-.home-archive__source > span {
-  display: inline-block;
-  color: var(--brass-300);
+.home-archive__source > .icon--external {
   transition: transform var(--quick) var(--ease-out);
 }
 
-.home-archive__ledger a:hover .home-archive__source > span {
+.home-archive__ledger a:hover .home-archive__source > .icon--external {
   transform: translateX(2px);
 }
 
@@ -878,7 +900,7 @@
   display: inline-flex;
   min-height: 44px;
   align-items: center;
-  gap: 5px;
+  gap: 8px;
   color: var(--bone-200);
   font-size: 13px;
   font-weight: 500;
@@ -910,7 +932,7 @@
   display: inline-flex;
   min-height: 30px;
   align-items: center;
-  gap: 5px;
+  gap: 8px;
   color: var(--bone-200);
   font-size: 13px;
 }
@@ -1006,6 +1028,10 @@
 
   .home-header .header-inner {
     min-height: var(--home-header-height);
+  }
+
+  .home-header .site-nav a {
+    font-size: 15px;
   }
 
   .home-hero__inner {
@@ -1117,12 +1143,6 @@
   }
 
   .home-hero__channels a {
-    font-size: 12px;
-  }
-
-  .home-hero__credit {
-    max-width: 34ch;
-    margin-top: 12px;
     font-size: 12px;
   }
 
