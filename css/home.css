@@ -890,7 +890,7 @@
 .home-community__socials {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px 22px;
+  gap: 8px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -898,12 +898,17 @@
 
 .home-community__socials a {
   display: inline-flex;
-  min-height: 44px;
+  width: 44px;
+  min-width: 44px;
+  height: 44px;
   align-items: center;
-  gap: 8px;
+  justify-content: center;
   color: var(--bone-200);
-  font-size: 13px;
-  font-weight: 500;
+}
+
+.home .home-community__socials .icon {
+  width: 24px;
+  height: 24px;
 }
 
 .home-footer {
