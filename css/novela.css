@@ -32,7 +32,24 @@
   --novela-reader-controls-height: 68px;
   --novela-reader-bottom-clearance: 16px;
   --novela-reader-available-height: calc(100svh - var(--home-header-height, 84px) - var(--novela-reader-gap) - var(--novela-reader-controls-height) - var(--novela-reader-bottom-clearance));
+  position: relative;
+  isolation: isolate;
   padding-top: calc(var(--home-header-height, 84px) + var(--novela-reader-gap));
+}
+
+.novela-main--chapter::before {
+  position: absolute;
+  z-index: -1;
+  inset: var(--home-header-height, 84px) 0 0;
+  background:
+    linear-gradient(180deg, rgba(8, 7, 6, .28) 0%, rgba(8, 7, 6, .3) 64%, rgba(8, 7, 6, .4) 100%),
+    radial-gradient(ellipse 54% 68% at 50% 42%, rgba(8, 7, 6, 0) 38%, rgba(8, 7, 6, .13) 70%, rgba(8, 7, 6, .4) 100%),
+    radial-gradient(ellipse at 39% 18%, rgba(211, 159, 89, .2) 0%, rgba(211, 159, 89, .1) 24%, transparent 48%),
+    url("../assets/novela/mesa.webp");
+  background-position: center top;
+  background-size: cover;
+  content: "";
+  pointer-events: none;
 }
 
 .novela-html {
@@ -193,7 +210,8 @@ a.novela-chapter-link:hover .novela-chapter-title {
   width: 100%;
   max-width: none;
   margin: var(--step-3) 0 var(--step-5);
-  padding-inline: 0;
+  padding: 10px 14px;
+  background: linear-gradient(90deg, rgba(12, 10, 8, .84), rgba(12, 10, 8, .78) 50%, rgba(12, 10, 8, .84));
 }
 
 .novela-chapter-page .novela-breadcrumbs ol {
@@ -209,14 +227,14 @@ a.novela-chapter-link:hover .novela-chapter-title {
 .novela-chapter-page .novela-breadcrumbs li {
   display: inline-flex;
   align-items: center;
-  color: var(--fg-muted);
+  color: var(--bone-100);
   font-size: var(--text-small);
   line-height: 1.5;
 }
 
 .novela-chapter-page .novela-breadcrumbs li + li::before {
   padding-inline: .65em;
-  color: var(--brass-500);
+  color: var(--brass-300);
   content: "›";
 }
 
@@ -232,27 +250,13 @@ a.novela-chapter-link:hover .novela-chapter-title {
   --reader-column-gap: calc(var(--reader-inner-margin) + var(--reader-inner-margin));
   --reader-outer-margin: var(--reader-inner-margin);
   --reader-block-padding: clamp(48px, 4.7cqi, 56px);
-  --reader-bottom-padding: 52px;
+  --reader-bottom-padding: 72px;
+  --reader-folio-bottom: 36px;
   position: relative;
   container-type: inline-size;
   isolation: isolate;
   padding-bottom: var(--step-16);
   color: var(--page-ink);
-}
-
-.novela-reader::before {
-  position: absolute;
-  z-index: -1;
-  inset: -18px calc(0px - var(--gutter));
-  background:
-    radial-gradient(ellipse at 24% 10%, rgba(211, 159, 89, .09), transparent 44%),
-    linear-gradient(rgba(8, 7, 6, .20), rgba(8, 7, 6, .20)),
-    url("../assets/novela/mesa.webp");
-  background-position: center top;
-  background-size: cover;
-  opacity: .96;
-  content: "";
-  pointer-events: none;
 }
 
 .novela-reader__book {
@@ -620,7 +624,11 @@ a.novela-chapter-link:hover .novela-chapter-title {
   color: var(--page-ink);
   font: 400 var(--text-body)/1.5 var(--font-book);
   overflow-wrap: break-word;
+  -webkit-hyphens: auto;
   hyphens: auto;
+  -webkit-hyphenate-limit-before: 3;
+  -webkit-hyphenate-limit-after: 2;
+  hyphenate-limit-chars: 6 3 2;
 }
 
 .novela-reader__opening {
@@ -948,7 +956,7 @@ a.novela-chapter-link:hover .novela-chapter-title {
 }
 
 .novela-reader__folio {
-  bottom: 16px;
+  bottom: var(--reader-folio-bottom);
   color: var(--page-ink);
   font-size: 12px;
   font-variant-numeric: oldstyle-nums;
@@ -969,7 +977,9 @@ a.novela-chapter-link:hover .novela-chapter-title {
   align-items: center;
   gap: var(--step-3);
   min-height: 68px;
-  color: var(--fg-muted);
+  padding-inline: 12px;
+  background: linear-gradient(90deg, rgba(12, 10, 8, .84), rgba(12, 10, 8, .78) 50%, rgba(12, 10, 8, .84));
+  color: var(--bone-100);
 }
 
 .novela-reader__controls[hidden] {
@@ -998,7 +1008,10 @@ a.novela-chapter-link:hover .novela-chapter-title {
 
 .novela-reader__page-button:disabled {
   cursor: not-allowed;
-  opacity: .46;
+  border-color: var(--line-strong);
+  background: var(--surface);
+  color: var(--bone-300);
+  opacity: 1;
 }
 
 .novela-reader__page-button:first-child {
@@ -1018,7 +1031,8 @@ a.novela-chapter-link:hover .novela-chapter-title {
 
 .novela-reader .novela-chapter-footer {
   max-width: none;
-  padding-block: 0 var(--step-12);
+  padding: 16px 14px var(--step-12);
+  background: linear-gradient(90deg, rgba(12, 10, 8, .84), rgba(12, 10, 8, .76) 50%, rgba(12, 10, 8, .84));
 }
 
 .novela-reader .novela-external-link,
@@ -1085,7 +1099,7 @@ a.novela-chapter-link:hover .novela-chapter-title {
   }
 
   .novela-reader {
-    --reader-inner-margin: clamp(24px, 5cqi, 36px);
+    --reader-inner-margin: clamp(28px, 5cqi, 36px);
     --reader-outer-margin: var(--reader-inner-margin);
     --reader-column-gap: calc(var(--reader-outer-margin) + var(--reader-outer-margin));
   }
@@ -1098,6 +1112,12 @@ a.novela-chapter-link:hover .novela-chapter-title {
     column-count: 1;
     column-width: auto;
     column-gap: calc(var(--reader-outer-margin) + var(--reader-outer-margin));
+  }
+
+  @supports not ((hyphens: auto) or (-webkit-hyphens: auto)) {
+    .novela-reader__flow > p {
+      text-align: left;
+    }
   }
 
   .novela-reader__running-head--left,
@@ -1121,6 +1141,13 @@ a.novela-chapter-link:hover .novela-chapter-title {
     right: 0;
     left: 0;
     width: 100%;
+  }
+
+  .novela-reader.is-paginated .novela-reader__paper-edges {
+    background:
+      repeating-linear-gradient(270deg, #806746 0 1px, #E1D2B0 1px 2px, #A58E68 2px 3px, #E7D9B9 3px 4px) right center / var(--reader-stack-right, 6px) 100% no-repeat,
+      repeating-linear-gradient(180deg, #806746 0 1px, #E1D2B0 1px 2px, #A58E68 2px 3px, #E7D9B9 3px 4px) left bottom / 100% var(--reader-stack-bottom, 18px) no-repeat,
+      linear-gradient(90deg, rgba(57, 41, 27, .16), transparent 8px, transparent calc(100% - 8px), rgba(57, 41, 27, .24));
   }
 
   .novela-reader__book::after {
@@ -1243,6 +1270,12 @@ a.novela-chapter-link:hover .novela-chapter-title {
   }
 
   .novela-reader .novela-pagination__item--next {
+    text-align: left;
+  }
+}
+
+@media (max-width: 399px) {
+  .novela-reader__flow > p {
     text-align: left;
   }
 }

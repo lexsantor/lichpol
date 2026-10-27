@@ -653,8 +653,8 @@ function enhanceChapterReader() {
     currentPage = startPageForSpread(requestedPage, pageCount, pagesPerSpread);
     flow.style.setProperty('--reader-offset', `${pageOffsetForSpread(currentPage, lastMetrics.stride, pagesPerSpread)}px`);
     const progressRatio = pageCount > 1 ? (currentPage - 1) / (pageCount - 1) : 0;
-    const stackRange = pagesPerSpread === 1 ? 8 : 8;
-    const minimumStack = 20;
+    const stackRange = pagesPerSpread === 1 ? 2 : 8;
+    const minimumStack = pagesPerSpread === 1 ? 6 : 20;
     book.style.setProperty('--reader-stack-left', `${(minimumStack + progressRatio * stackRange).toFixed(1)}px`);
     book.style.setProperty('--reader-stack-right', `${(minimumStack + (1 - progressRatio) * stackRange).toFixed(1)}px`);
     book.style.setProperty('--reader-stack-bottom', `${(18 + progressRatio * 2).toFixed(1)}px`);
