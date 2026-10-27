@@ -41,6 +41,16 @@ if (!button || !liveStatus || !AudioContextConstructor) {
 
   button.hidden = false;
 
+  function setAudioSessionType(type) {
+    try {
+      if (typeof navigator !== 'undefined' && navigator.audioSession) {
+        navigator.audioSession.type = type;
+      }
+    } catch {
+      // Audio session controls are optional and may be unavailable in some browsers.
+    }
+  }
+
   function renderState({ error = false, announce = false } = {}) {
     button.setAttribute('aria-checked', String(userWantsPlayback));
     button.dataset.error = String(error);
@@ -260,6 +270,7 @@ if (!button || !liveStatus || !AudioContextConstructor) {
   }
 
   async function failPlayback() {
+    setAudioSessionType('auto');
     userWantsPlayback = false;
     isLoading = false;
     isTransitioning = false;
@@ -315,6 +326,7 @@ if (!button || !liveStatus || !AudioContextConstructor) {
       // Stop the sources below even if gain automation is unavailable.
     }
     await new Promise(resolve => window.setTimeout(resolve, FADE_OUT_SECONDS * 1000));
+    setAudioSessionType('auto');
     stopAllVoices();
     try {
       if (audioContext && audioContext.state !== 'closed') await audioContext.suspend();
@@ -364,7 +376,10 @@ if (!button || !liveStatus || !AudioContextConstructor) {
     if (isLoading || isTransitioning) return;
     button.dataset.error = 'false';
     if (userWantsPlayback) void handleStop();
-    else void handleStart();
+    else {
+      setAudioSessionType('playback');
+      void handleStart();
+    }
   });
   document.addEventListener('visibilitychange', () => {
     void handleVisibilityChange().catch(() => failPlayback());
