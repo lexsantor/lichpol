@@ -1411,10 +1411,10 @@
 .home-header .site-nav a:not(.btn),
 .home-header .nav-group summary {
   color: var(--bone-200);
-  font-family: var(--font-ui);
+  font-family: var(--font-title);
   font-size: var(--text-body);
-  font-weight: 500;
-  letter-spacing: 0;
+  font-weight: 600;
+  letter-spacing: .04em;
 }
 
 .home-header .site-nav a:not(.btn):hover,
