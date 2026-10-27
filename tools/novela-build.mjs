@@ -5,6 +5,7 @@ import { fileURLToPath, pathToFileURL } from 'node:url';
 const SCRIPT_DIRECTORY = path.dirname(fileURLToPath(import.meta.url));
 export const REPOSITORY_ROOT = path.resolve(SCRIPT_DIRECTORY, '..');
 const SOURCE_DIRECTORY = path.join(REPOSITORY_ROOT, 'kuroto-novela');
+const NOVELA_INDEX_HREF = '/novela/kuroto/';
 const CAMPAIGN_PLAYLIST = 'https://www.youtube.com/playlist?list=PLelQK3I2Q5zymJZ2e2SNmwxsnnFGjBCYb';
 const OG_COVER = 'https://lichpol.vercel.app/assets/kuroto.webp';
 
@@ -114,6 +115,10 @@ function countHtmlWords(markup) {
     .replace(/<[^>]*>/gu, ' ')
     .replace(/&(?:amp|lt|gt|quot|#39|#\d+|#x[\da-f]+);/giu, ' ');
   return text.match(/[\p{L}\p{N}]+(?:[’'-][\p{L}\p{N}]+)*/gu)?.length ?? 0;
+}
+
+function chapterHref(chapterNumber) {
+  return `/novela/kuroto/${String(chapterNumber).padStart(3, '0')}`;
 }
 
 export function insertPlateAtParagraphMidpoint(proseHtml, plate) {
@@ -409,7 +414,7 @@ export function renderSharedHeader() {
   <a class="skip-link" href="#main">Saltar al contenido</a>
   <header class="site-header home-header">
     <div class="container header-inner">
-      <a class="brand" href="../../index.html" aria-label="Lichpol, The Arcane Tavern: inicio">
+      <a class="brand" href="/" aria-label="Lichpol, The Arcane Tavern: inicio">
         <img src="../../assets/lichpol-logo-white.svg" alt="" width="48" height="48">
         <span class="brand-stack"><strong>LICHPOL</strong><small>THE ARCANE TAVERN</small></span>
       </a>
@@ -429,19 +434,19 @@ export function renderSharedHeader() {
         <details class="nav-group">
           <summary>La Taberna <svg class="icon nav-group__chevron" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
           <ul class="nav-group__panel">
-            <li><a href="../../index.html#dungeon-master">El Dungeon Master</a></li>
-            <li><a href="../../index.html#campanas">Campañas</a></li>
-            <li><a href="../../index.html#cronicas">Crónicas</a></li>
-            <li><a href="../../index.html#comunidad">Comunidad</a></li>
+            <li><a href="/#dungeon-master">El Dungeon Master</a></li>
+            <li><a href="/#campanas">Campañas</a></li>
+            <li><a href="/#cronicas">Crónicas</a></li>
+            <li><a href="/#comunidad">Comunidad</a></li>
           </ul>
         </details>
         <div class="nav-mobile-group">
           <p class="nav-drawer-label">La Taberna</p>
           <ul class="nav-mobile-links">
-            <li><a href="../../index.html#dungeon-master">El Dungeon Master</a></li>
-            <li><a href="../../index.html#campanas">Campañas</a></li>
-            <li><a href="../../index.html#cronicas">Crónicas</a></li>
-            <li><a href="../../index.html#comunidad">Comunidad</a></li>
+            <li><a href="/#dungeon-master">El Dungeon Master</a></li>
+            <li><a href="/#campanas">Campañas</a></li>
+            <li><a href="/#cronicas">Crónicas</a></li>
+            <li><a href="/#comunidad">Comunidad</a></li>
           </ul>
         </div>
         <a class="nav-adventure" href="https://khr0mz.github.io/arghast/" target="_blank" rel="noopener noreferrer">Aventuras ${renderIcon('external', 'icon icon--external')}<span class="visually-hidden">(se abre en una pestaña nueva)</span></a>
@@ -474,7 +479,7 @@ function renderTocBook(book, chapters, publishedNumbers) {
     const interlude = chapter.interludio === true ? '<span class="novela-interlude">Interludio</span>' : '';
     const title = escapeHtml(chapter.titulo);
     if (publishedNumbers.has(chapterNumber)) {
-      return `          <li><a class="novela-chapter-link" href="${String(chapterNumber).padStart(3, '0')}.html" data-chapter-number="${chapterNumber}"><span class="novela-chapter-number">${numberLabel}</span><span class="novela-chapter-title">${title}</span>${interlude}</a></li>`;
+      return `          <li><a class="novela-chapter-link" href="${chapterHref(chapterNumber)}" data-chapter-number="${chapterNumber}"><span class="novela-chapter-number">${numberLabel}</span><span class="novela-chapter-title">${title}</span>${interlude}</a></li>`;
     }
     return `          <li><span class="novela-chapter-link novela-chapter-link--upcoming"><span class="novela-chapter-number">${numberLabel}</span><span class="novela-chapter-title">${title}</span>${interlude}</span></li>`;
   }).join('\n');
@@ -510,9 +515,9 @@ ${renderSharedHeader()}
           <h1 id="novela-title">Aventuras en Kuroto</h1>
           <p class="novela-hero__lead">La campaña que se jugó en directo en Twitch, contada como novela en diez libros.</p>
           <div class="button-row novela-hero__actions">
-            <a class="btn btn-primary" href="001.html">Empezar a leer</a>
+            <a class="btn btn-primary" href="${chapterHref(1)}">Empezar a leer</a>
             <a class="text-link novela-external-link" href="${CAMPAIGN_PLAYLIST}" target="_blank" rel="noopener noreferrer">Ver la campaña en YouTube ${renderIcon('external', 'icon icon--external')}<span class="visually-hidden">(se abre en una pestaña nueva)</span></a>
-            <a class="text-link novela-hero__continue" href="001.html" data-continue-reading hidden></a>
+            <a class="text-link novela-hero__continue" href="${chapterHref(1)}" data-continue-reading hidden></a>
           </div>
         </div>
       </div>
@@ -534,18 +539,18 @@ ${bookSections}
 function renderBreadcrumbs(chapter, book) {
   return `    <nav class="novela-breadcrumbs container reading" aria-label="Migas de pan">
       <ol>
-        <li><a href="../../index.html">Lichpol</a></li>
-        <li><a href="index.html">Kuroto</a></li>
-        <li><a href="index.html#libro-${book.numero}">Libro ${escapeHtml(toRoman(book.numero))}</a></li>
+        <li><a href="/">Lichpol</a></li>
+        <li><a href="${NOVELA_INDEX_HREF}">Kuroto</a></li>
+        <li><a href="${NOVELA_INDEX_HREF}#libro-${book.numero}">Libro ${escapeHtml(toRoman(book.numero))}</a></li>
       </ol>
     </nav>`;
 }
 
 function renderPaginationItem({ chapter, direction, rel }) {
   if (!chapter) return '';
-  const number = String(chapter.numero).padStart(3, '0');
   const label = direction === 'prev' ? 'Anterior' : 'Siguiente';
-  return `        <a class="novela-pagination__item novela-pagination__item--${direction}" href="${number}.html" rel="${rel}">
+  const href = `${chapterHref(chapter.numero)}${direction === 'prev' ? '#fin' : ''}`;
+  return `        <a class="novela-pagination__item novela-pagination__item--${direction}" href="${href}" rel="${rel}">
           <span class="eyebrow">${label}</span>
           <span class="novela-pagination__title">Capítulo ${chapter.numero} · ${escapeHtml(chapter.titulo)}</span>
         </a>`;
@@ -557,7 +562,7 @@ export function renderChapterPage({ chapter, book, proseHtml, description, previ
   const renderedProse = insertPlateAtParagraphMidpoint(proseHtml, plate);
   const pageTitle = `Capítulo ${chapter.numero} · ${chapter.titulo} | Kuroto, la novela | Lichpol`;
   const previousItem = chapter.numero === 1
-    ? `        <a class="novela-pagination__item novela-pagination__item--prev" href="index.html" rel="prev"><span class="eyebrow">Anterior</span><span class="novela-pagination__title">Índice de Kuroto</span></a>`
+    ? `        <a class="novela-pagination__item novela-pagination__item--prev" href="${NOVELA_INDEX_HREF}" rel="prev"><span class="eyebrow">Anterior</span><span class="novela-pagination__title">Índice de Kuroto</span></a>`
     : renderPaginationItem({ chapter: previous, direction: 'prev', rel: 'prev' });
   let nextItem = '';
   if (next && publishedSet.has(next.numero)) {
@@ -571,10 +576,10 @@ export function renderChapterPage({ chapter, book, proseHtml, description, previ
 
   const videoLink = renderExternalLink(chapter.video, 'Ver el directo original');
   const descriptionText = description ?? getPlainDescription(chapter.body);
-  const prevHref = chapter.numero === 1 ? 'index.html' : previous ? `${String(previous.numero).padStart(3, '0')}.html` : '';
-  const nextHref = next && publishedSet.has(next.numero) ? `${String(next.numero).padStart(3, '0')}.html` : '';
+  const prevHref = chapter.numero === 1 ? NOVELA_INDEX_HREF : previous ? chapterHref(previous.numero) : '';
+  const nextHref = next && publishedSet.has(next.numero) ? chapterHref(next.numero) : '';
   const minutes = Math.max(1, Math.round(Number(chapter.palabras || 0) / 230));
-  const standaloneIndexLink = chapter.numero === 1 ? '' : '<a class="text-link novela-index-link" href="index.html">Índice de Kuroto</a>';
+  const standaloneIndexLink = chapter.numero === 1 ? '' : `<a class="text-link novela-index-link" href="${NOVELA_INDEX_HREF}">Índice de Kuroto</a>`;
 
   return `${pageHead({ title: pageTitle, description: descriptionText, preloadStoryFont: true })}
 <body class="novela-page novela-chapter-page" data-chapter-number="${chapter.numero}" data-prev-href="${prevHref}" data-next-href="${nextHref}">

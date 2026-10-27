@@ -230,17 +230,22 @@ export function readContinueRecord(raw) {
     : null;
 }
 
+export function chapterHref(chapterNumber) {
+  return `/novela/kuroto/${String(chapterNumber).padStart(3, '0')}`;
+}
+
 function enhanceContinueLink() {
   const continueLink = document.querySelector('[data-continue-reading]');
   if (!continueLink) return;
   try {
     const record = readContinueRecord(window.localStorage.getItem('lichpol:kuroto:ultimo'));
     if (!record) return;
+    const href = chapterHref(record.chapter);
     const chapterLink = [...document.querySelectorAll('[data-chapter-number]')]
-      .find(link => Number(link.dataset.chapterNumber) === record.chapter);
+      .find(link => Number(link.dataset.chapterNumber) === record.chapter && link.getAttribute('href') === href);
     if (!chapterLink) return;
     const title = chapterLink.querySelector('.novela-chapter-title')?.textContent?.trim() ?? '';
-    continueLink.href = `${chapterLink.getAttribute('href')}#p=${record.page}`;
+    continueLink.href = `${href}#p=${record.page}`;
     continueLink.textContent = `Continuar: Capítulo ${record.chapter} · ${title}`;
     continueLink.hidden = false;
   } catch {

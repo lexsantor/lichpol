@@ -182,6 +182,14 @@ test('continue-reading records accept the current object and the old numeric val
   assert.deepEqual(readerHelpers.readContinueRecord('7'), { chapter: 7, page: 1 });
   assert.deepEqual(readerHelpers.readContinueRecord('001'), { chapter: 1, page: 1 });
   assert.equal(readerHelpers.readContinueRecord('invalid'), null);
+  assert.equal(readerHelpers.chapterHref(7), '/novela/kuroto/007');
+});
+
+test('generated chapter navigation uses root-absolute extensionless URLs', async () => {
+  const chapterOne = await readFile(new URL('../novela/kuroto/001.html', import.meta.url), 'utf8');
+  assert.match(chapterOne, /data-prev-href="\/novela\/kuroto\/"/u);
+  assert.match(chapterOne, /data-next-href="\/novela\/kuroto\/002"/u);
+  assert.doesNotMatch(chapterOne, /href="[^"]*\d{3}\.html/u);
 });
 
 test('all real Kuroto chapter sources validate cleanly', async () => {
