@@ -33,3 +33,8 @@ Comprobado directamente contra las APIs públicas (YouTube oEmbed, Discord invit
 - Primeros vídeos (oEmbed): C1 `vHBN_coPYGw` = "Capítulo 2, Los Bandidos" (el capítulo 1 no está en la playlist, sin enlace a capítulo); C2 `PHRE2squ71Y` = "Capítulo 1: Un Lugar Extraño"; C4 `mOJ7bDIALRw` = "El Huevo - Capítulo 01".
 - Horario: `https://www.twitch.tv/lichpol_gamer/schedule`, idéntico 3 semanas seguidas (26 oct - 15 nov 2026): lun y mar "Campañas de D&D", mié y jue "Aventuras de D&D", 20:30-23:00 hora de Madrid. La bio de X (`content-lichpol.md`) dice lun-mié; prevalece Twitch por ser la fuente que indicó el propietario.
 - Siguen sin publicarse: número de capítulos, plazas, estado (en curso/finalizada).
+
+## Audio (2026-10-27)
+- Música de ambiente: "Cathedral in the forest (ambient loop)" de congusbongus, OpenGameArt (https://opengameart.org/content/cathedral-in-the-forest-ambient-loop), licencia CC0. Original `forest_2.ogg` (2,9 MB, 2:17, 44,1 kHz estéreo) aportado por el propietario; fuera de Git en `tasks/audio-src/`.
+- Derivados (ffmpeg 9.0.2, gyan.dev): `assets/audio/ambiente.webm` (Opus 40k, 930 KB) y `assets/audio/ambiente.m4a` (AAC 64k, 1,1 MB, para Safari).
+- Uso: solo bajo demanda (botón junto al d20), apagado por defecto, sin autoplay.

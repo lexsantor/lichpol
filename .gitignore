@@ -8,3 +8,4 @@ node_modules/
 
 # Source PNGs of generated art (WebP derivatives live in assets/)
 tasks/art-src/
+tasks/audio-src/

@@ -41,6 +41,8 @@
     <symbol id="i-instagram" viewBox="0 0 24 24" fill="none"><path d="M9 22H15C20 22 22 20 22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 15.5C13.933 15.5 15.5 13.933 15.5 12C15.5 10.067 13.933 8.5 12 8.5C10.067 8.5 8.5 10.067 8.5 12C8.5 13.933 10.067 15.5 12 15.5Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M17.6361 7H17.6477" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
     <symbol id="i-x" viewBox="0 0 24 24" fill="currentColor"><path d="M14.234 10.162 22.977 0h-2.072l-7.591 8.824L7.251 0H.258l9.168 13.343L.258 24H2.33l8.016-9.318L16.749 24h6.993zm-2.837 3.299-.929-1.329L3.076 1.56h3.182l5.965 8.532.929 1.329 7.754 11.09h-3.182z"/></symbol>
     <symbol id="i-external" viewBox="0 0 24 24" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M9 6.75C8.58579 6.75 8.25 6.41421 8.25 6C8.25 5.58579 8.58579 5.25 9 5.25H18C18.4142 5.25 18.75 5.58579 18.75 6V15C18.75 15.4142 18.4142 15.75 18 15.75C17.5858 15.75 17.25 15.4142 17.25 15V7.81066L6.53033 18.5303C6.23744 18.8232 5.76256 18.8232 5.46967 18.5303C5.17678 18.2374 5.17678 17.7626 5.46967 17.4697L16.1893 6.75H9Z" fill="currentColor"/></symbol>
+    <symbol id="i-speaker-off" viewBox="0 0 24 24" fill="none"><path d="M11 5 6 9H3v6h3l5 4V5Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="m16 9 5 6m0-6-5 6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+    <symbol id="i-speaker-on" viewBox="0 0 24 24" fill="none"><path d="M11 5 6 9H3v6h3l5 4V5Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="M15.5 8.5a5 5 0 0 1 0 7m3-10a9 9 0 0 1 0 13" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
   </svg>
   <a class="skip-link" href="#main">Saltar al contenido</a>
 
@@ -634,6 +636,13 @@
     </div>
   </div>
   <p class="visually-hidden" role="status" aria-live="polite" id="d20-live"></p>
+  <button class="ambience-toggle" type="button" aria-pressed="false" aria-label="Música de ambiente" aria-busy="false" hidden>
+    <svg class="icon ambience-toggle__icon ambience-toggle__icon--off" aria-hidden="true" focusable="false"><use href="#i-speaker-off"/></svg>
+    <svg class="icon ambience-toggle__icon ambience-toggle__icon--on" aria-hidden="true" focusable="false"><use href="#i-speaker-on"/></svg>
+    <span class="ambience-tooltip" aria-hidden="true">Música de ambiente · <span data-ambience-state>Desactivada</span></span>
+  </button>
+  <p class="visually-hidden" role="status" aria-live="polite" id="ambience-live"></p>
   <script type="module" src="js/d20.js"></script>
+  <script type="module" src="js/ambience.js"></script>
 </body>
 </html>
