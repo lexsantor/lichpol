@@ -7,7 +7,7 @@ Tanda 1: 1-10 (done) · 2: 11-20 · 3: 21-30 · 4: 31-40 · 5: 41-50 · 6: 51-60
 
 ## Fixed inputs (read-only, never edit)
 - PLATE PROMPT and fidelity rules: tasks/codex-r44.md section C. Owner-approved style = the tanda 1 plates (tasks/art-src/lamina-001..010-attempt*.png).
-- Character bible: tasks/art-src/biblia-personajes.md and sheets in tasks/art-src/referencias/. Owner confirmed (2026-10-27): Hayate is a human with wings (keep the bible descriptor).
+- Character bible: tasks/art-src/biblia-personajes.md (includes merged additions of batches 2-4; later merges are appended there) and sheets in tasks/art-src/referencias/ (including *-tNN.png). Owner confirmed (2026-10-27): Hayate is a human with wings (keep the bible descriptor).
 - kuroto-novela/GUIA_ESTILO.md and the chapters in kuroto-novela/capitulos/.
 
 ## Your outputs (only these paths)
