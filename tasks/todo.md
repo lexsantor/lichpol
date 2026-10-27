@@ -22,6 +22,8 @@ Plan: Fable blueprint (2026-10-22), authorized by Claude with changes noted belo
 
 | D14 | Owner 2026-10-27: plate style of tanda 1 (ink-sepia engraving, tasks/codex-r44.md C prompt, character bible tasks/art-src/biblia-personajes.md) APPROVED for all 181 chapters; produced via Codex in 18 batches (17x10 + 11), run 3 in parallel, each writing its own tanda-NN.json / biblia-tanda-NN.md, merged by Claude after review; WebP export by Claude (1000px wide, no upscale). Hayate = human with wings (owner). Plates sit on their own page; the reader splits the paragraph at the column boundary (R49). COMPLETE 2026-10-27: 181/181 chapters illustrated (batches 1-18 + redo rounds; rejected and regenerated: 93, 97-101, 18, 27, 28, 35, 45, 74, 81, 82, 86, 88; recoloured to sepia: 54, 62, 69, 80, 134, 153, 178). Verified: 181 chapter pages load with their plate, 0 console errors, 0 404s (Chromium); reader QA (WebKit + Chromium) clean. Owner accepted 2026-10-28 ("tienes mi visto bueno"); merged to main and deployed to production. | ACCEPTED (owner 2026-10-28) |
 
+| D15 | Owner 2026-10-28: clean URLs, /novela/kuroto/001 instead of 001.html. vercel.json {"cleanUrls": true}; navigation links root-absolute and extensionless (Vercel redirects /novela/kuroto/index.html to /novela/kuroto without slash, where relative links would break); old .html links 308-redirect. No canonical (D6). Verified in production (R57). | VERIFIED |
+
 ## Tasks
 - [x] T0 baseline commit, logo rename, .gitignore, .vercelignore, content verification log
 - [x] T1 Codex: d20 core + tests (node --test tests/d20.test.mjs, 9/9)
