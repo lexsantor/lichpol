@@ -1,12 +1,4 @@
 @font-face {
-  font-family: "Cormorant Garamond";
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url("../assets/fonts/cormorant-garamond-latin-500-normal.woff2") format("woff2");
-}
-
-@font-face {
   font-family: "Alegreya";
   font-style: normal;
   font-weight: 400;
@@ -20,6 +12,10 @@
   font-weight: 400;
   font-display: swap;
   src: url("../assets/fonts/alegreya-latin-400-italic.woff2") format("woff2");
+}
+
+.novela-page {
+  --font-book: "Alegreya", Georgia, serif;
 }
 
 .novela-main {
@@ -104,7 +100,7 @@
   max-width: 620px;
   margin: 0 0 var(--step-6) !important;
   color: var(--bone-200);
-  font: 500 var(--text-h6)/1.4 var(--font-story);
+  font: 500 var(--text-h6)/1.4 var(--font-book);
 }
 
 .novela-hero__actions {
@@ -239,12 +235,11 @@ a.novela-chapter-link:hover .novela-chapter-title {
 }
 
 .novela-reader {
-  /* PROPOSED (D13 v2): component-local parchment and swappable book face. */
+  /* Parchment and reader surface tokens. */
   --page-paper: #DCCFAE;
   --page-edge: #CDBB92;
   --page-ink: var(--ink-850);
   --page-accent: var(--brass-700);
-  --font-book: "Alegreya", Georgia, serif;
   --reader-inner-margin: 52px;
   --reader-fold-width: 28px;
   --reader-column-gap: calc(var(--reader-inner-margin) + var(--reader-inner-margin));

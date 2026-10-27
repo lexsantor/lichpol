@@ -614,7 +614,7 @@ ${renderSharedHeader()}
         <div class="novela-reader__viewport" data-reader-viewport>
           <article class="novela-reader__flow" id="novela-prose" aria-label="Capítulo ${chapter.numero}: ${escapeHtml(chapter.titulo)}">
             <header class="novela-reader__opening">
-              <p class="novela-reader__chapter-number">Capítulo ${chapter.numero}</p>
+              <p class="novela-reader__chapter-number">Capítulo ${chapter.numero}${chapter.interludio === true ? ' <span class="novela-interlude">Interludio</span>' : ''}</p>
               <h1>${escapeHtml(chapter.titulo)}</h1>
               <p class="novela-reader__book-line">Libro ${escapeHtml(toRoman(book.numero))} · ${escapeHtml(book.titulo)}</p>
             </header>

@@ -55,6 +55,12 @@ export function pageFromHash(hash, pageCount, pagesPerSpread = 2) {
   return startPageForSpread(Number(match[1]), total, pagesPerSpread);
 }
 
+export function pageHashForSpread(page, pagesPerSpread = 2) {
+  const pageNumber = Math.max(1, Math.floor(Number(page) || 1));
+  const firstPage = startPageForSpread(pageNumber, pageNumber, pagesPerSpread);
+  return firstPage === 1 ? '' : `#p=${firstPage}`;
+}
+
 export function columnPitchFromPositions(positions, fallbackWidth = 0, fallbackGap = 0) {
   const starts = [...new Set((Array.isArray(positions) ? positions : [])
     .map(Number)
@@ -641,7 +647,7 @@ function enhanceChapterReader() {
   }
 
   function writePageHash() {
-    const nextHash = `#p=${currentPage}`;
+    const nextHash = pageHashForSpread(currentPage, pagesPerSpread);
     if (window.location.hash === nextHash) return;
     window.history.replaceState(window.history.state, '', `${window.location.pathname}${window.location.search}${nextHash}`);
   }

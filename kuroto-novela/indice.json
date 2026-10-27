@@ -3611,6 +3611,7 @@
       "numero": 132,
       "libro": 8,
       "titulo": "Pequeños",
+      "interludio": true,
       "titulo_sesion": "Miniyos",
       "archivo": "capitulos/132.md",
       "palabras": 2318,

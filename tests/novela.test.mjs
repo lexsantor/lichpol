@@ -6,6 +6,8 @@ import {
   insertPlateAtParagraphMidpoint,
   markdownToHtml,
   parseFrontMatter,
+  renderChapterPage,
+  renderTocPage,
   validateChapterSource,
   validateNovelSources,
 } from '../tools/novela-build.mjs';
@@ -114,11 +116,16 @@ test('reader page count comes from multicolumn scroll width', () => {
 });
 
 test('page hashes open a page, its spread, or the final spread', () => {
+  assert.equal(readerHelpers.pageFromHash('', 18, 2), 1);
   assert.equal(readerHelpers.pageFromHash('#p=4', 18, 2), 3);
   assert.equal(readerHelpers.pageFromHash('#p=4', 18, 1), 4);
   assert.equal(readerHelpers.pageFromHash('#fin', 18, 2), 17);
   assert.equal(readerHelpers.pageFromHash('#fin', 18, 1), 18);
   assert.equal(readerHelpers.pageFromHash('#unknown', 18, 2), 1);
+  assert.equal(readerHelpers.pageHashForSpread(1, 2), '');
+  assert.equal(readerHelpers.pageHashForSpread(2, 2), '');
+  assert.equal(readerHelpers.pageHashForSpread(2, 1), '#p=2');
+  assert.equal(readerHelpers.pageHashForSpread(4, 2), '#p=3');
   assert.equal(readerHelpers.formatPageStatus(3, 18, true), 'Páginas 3-4 de 18');
   assert.equal(readerHelpers.formatPageStatus(3, 18, false), 'Página 3 de 18');
 });
@@ -190,6 +197,32 @@ test('generated chapter navigation uses root-absolute extensionless URLs', async
   assert.match(chapterOne, /data-prev-href="\/novela\/kuroto\/"/u);
   assert.match(chapterOne, /data-next-href="\/novela\/kuroto\/002"/u);
   assert.doesNotMatch(chapterOne, /href="[^"]*\d{3}\.html/u);
+});
+
+test('chapter 132 renders its interlude label in the TOC and opening block', async () => {
+  const index = JSON.parse(await readFile(new URL('../kuroto-novela/indice.json', import.meta.url), 'utf8'));
+  const chapter = index.capitulos.find(entry => entry.numero === 132);
+  const book = index.libros.find(entry => entry.numero === chapter.libro);
+  assert.equal(chapter.interludio, true);
+
+  const toc = renderTocPage({
+    books: [book],
+    chapters: [chapter],
+    publishedNumbers: new Set([chapter.numero]),
+    publishedLimit: null,
+  });
+  const chapterPage = renderChapterPage({
+    chapter: { ...chapter, body: '# Pequeños\n\nTexto.' },
+    book,
+    proseHtml: '<p>Texto.</p>',
+    description: 'Texto.',
+    previous: null,
+    next: null,
+    publishedNumbers: new Set([chapter.numero]),
+  });
+
+  assert.match(toc, /<span class="novela-chapter-number">Capítulo 132<\/span><span class="novela-chapter-title">Pequeños<\/span><span class="novela-interlude">Interludio<\/span>/u);
+  assert.match(chapterPage, /<p class="novela-reader__chapter-number">Capítulo 132 <span class="novela-interlude">Interludio<\/span><\/p>/u);
 });
 
 test('all real Kuroto chapter sources validate cleanly', async () => {

@@ -24,6 +24,8 @@ Plan: Fable blueprint (2026-10-22), authorized by Claude with changes noted belo
 
 | D15 | Owner 2026-10-28: clean URLs, /novela/kuroto/001 instead of 001.html. vercel.json {"cleanUrls": true}; navigation links root-absolute and extensionless (Vercel redirects /novela/kuroto/index.html to /novela/kuroto without slash, where relative links would break); old .html links 308-redirect. No canonical (D6). Verified in production (R57). | VERIFIED |
 
+| D16 | Owner 2026-10-28: chapter 132 marked as interlude (indice.json interludio:true, label in TOC and opening); no #p=1 hash on the first page; TOC lead in Alegreya, upright Cormorant removed; repo-local git credential username pinned to lexsantor (R58). | VERIFIED |
+
 ## Tasks
 - [x] T0 baseline commit, logo rename, .gitignore, .vercelignore, content verification log
 - [x] T1 Codex: d20 core + tests (node --test tests/d20.test.mjs, 9/9)
