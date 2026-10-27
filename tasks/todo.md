@@ -11,7 +11,8 @@ Plan: Fable blueprint (2026-10-22), authorized by Claude with changes noted belo
 | D4 | Legacy pages + .md docs kept in repo, excluded from deploy (.vercelignore): stale copy contradicts verified data. Reversible. | IMPLEMENTED, pending user acceptance |
 | D5 | Self-hosted OFL fonts (Cinzel 500/600, Inter variable, Cormorant 500 italic). 640/960w WebP variants. | VERIFIED |
 | D7 | Owner decisions 2026-10-23: Cinzel on nav, DM fact labels and archive campaign labels; hero credit and DM figcaption removed; UI font Inter -> DM Sans (tokens --font-ui); icons from Reicon (MIT, Solar Icons CC BY 4.0) as single-colour sprite. design.md still says Inter (not edited without authorization). | ACCEPTED (owner) |
-| D6 | og:image on the Vercel URL; no canonical until a domain is confirmed; no schedule/counts/status anywhere. | VERIFIED |
+| D6 | og:image on the Vercel URL; no canonical until a domain is confirmed; no counts/status anywhere. Schedule clause superseded by D8. | VERIFIED |
+| D8 | Owner request 2026-10-27: weekly stream calendar from the Twitch schedule (Europe/Madrid, lun-jue 20:30-23:00), official synopses verbatim, campaigns grouped as Aventuras (Kuroto, Xoltacan) + Campañas 1-4, 3 new covers generated with the owner's master prompt (Codex R17, R18 a11y follow-up). | VERIFIED (local QA 2026-10-27), pending owner acceptance |
 
 ## Tasks
 - [x] T0 baseline commit, logo rename, .gitignore, .vercelignore, content verification log

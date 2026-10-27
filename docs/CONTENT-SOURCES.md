@@ -26,3 +26,10 @@ Comprobado directamente contra las APIs públicas (YouTube oEmbed, Discord invit
 - Episodios citados: `f7E7uxoKseE` (Kuroto cap. 55), `BzuYZqJdEFw` (Campaña III cap. 70), `MEuZzIbuTNQ` (Campaña 3 Tierras Salvajes cap. 35; no aparece como playlist propia, sin tarjeta de campaña).
 - Discord: `discord.gg/qjqXeQGmXU` válida, sin caducidad, servidor «Lichpol», canal de llegadas. La invitación de Linktree `8MGMue85nG` está caducada.
 - No publicado por no verificable hoy: horarios, número de capítulos, plazas, estado de campañas.
+
+## Verificación 2026-10-27 (sinopsis oficiales + calendario)
+- Sinopsis de las 6 historias (Campañas 1-4, Aventuras en Kuroto y Xoltacan): texto oficial entregado por el propietario el 2026-10-27. Se publica literal; única normalización: "Xoltacán" -> "Xoltacan" (convención de YouTube, Twitch y la web).
+- Playlists nuevas en `@Lichpol` (HTTP 200): Campaña 1 No despiertes lo que no ha de ser despertado `PLelQK3I2Q5zxsWP218vCO_KNFB1fkG-xV`, Campaña 2 En la Bruma `PLelQK3I2Q5zwGWoCqGK_mGnFpEHovcRAB`, Campaña 4 Tierra de Dragones `PLelQK3I2Q5zyVAjMT30fE26_1TvPQ_8vR`.
+- Primeros vídeos (oEmbed): C1 `vHBN_coPYGw` = "Capítulo 2, Los Bandidos" (el capítulo 1 no está en la playlist, sin enlace a capítulo); C2 `PHRE2squ71Y` = "Capítulo 1: Un Lugar Extraño"; C4 `mOJ7bDIALRw` = "El Huevo - Capítulo 01".
+- Horario: `https://www.twitch.tv/lichpol_gamer/schedule`, idéntico 3 semanas seguidas (26 oct - 15 nov 2026): lun y mar "Campañas de D&D", mié y jue "Aventuras de D&D", 20:30-23:00 hora de Madrid. La bio de X (`content-lichpol.md`) dice lun-mié; prevalece Twitch por ser la fuente que indicó el propietario.
+- Siguen sin publicarse: número de capítulos, plazas, estado (en curso/finalizada).

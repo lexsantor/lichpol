@@ -408,15 +408,68 @@
   min-width: 0;
 }
 
-.home-worlds__layout {
+.home-worlds__group {
   display: grid;
-  grid-template-columns: repeat(12, minmax(0, 1fr));
   gap: 22px;
+  min-width: 0;
+}
+
+.home-worlds__group--adventures {
+  grid-template-columns: minmax(0, 1.6fr) minmax(280px, 1fr);
+}
+
+.home-worlds__group--campaigns {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 42px;
+}
+
+.home-worlds__group-title {
+  grid-column: 1 / -1;
+  margin: 0;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--line-strong);
+  color: var(--brass-300);
+  font: 600 12px/1.5 var(--font-ui);
+  letter-spacing: .13em;
+  text-transform: uppercase;
+}
+
+.home-worlds__group--adventures > .home-worlds__feature {
+  grid-column: 1;
+}
+
+.home-worlds__group--adventures > .home-worlds__xoltacan {
+  grid-column: 2;
+}
+
+.home-worlds__group--campaigns > .home-worlds__card {
+  min-height: 0;
+}
+
+.home-worlds__group--campaigns .home-worlds__card-media {
+  aspect-ratio: 16 / 9;
+}
+
+.home-worlds__group--campaigns .home-worlds__card-copy {
+  padding: 19px 22px 22px;
+}
+
+.home-worlds__group--campaigns .home-worlds__card h4 {
+  font-size: clamp(1.25rem, 1.7vw, 1.6rem);
+}
+
+.home-worlds__group--campaigns .home-worlds__card-copy > p:not(.home-worlds__meta) {
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.home-worlds__group--adventures > .home-worlds__feature,
+.home-worlds__group--adventures > .home-worlds__xoltacan {
+  min-width: 0;
 }
 
 .home-worlds__feature {
   position: relative;
-  grid-column: span 8;
   min-width: 0;
   min-height: 640px;
   overflow: hidden;
@@ -482,7 +535,7 @@
   letter-spacing: .08em;
 }
 
-.home-worlds__feature h3 {
+.home-worlds__feature h4 {
   max-width: 16ch;
   margin-bottom: 15px;
   font-size: clamp(2.2rem, 4.3vw, 4rem);
@@ -514,14 +567,6 @@
   text-decoration-color: var(--brass-300);
 }
 
-.home-worlds__supporting {
-  display: grid;
-  grid-column: span 4;
-  grid-template-rows: repeat(2, minmax(340px, 1fr));
-  gap: 22px;
-  min-width: 0;
-}
-
 .home-worlds__card {
   display: flex;
   flex-direction: column;
@@ -540,7 +585,7 @@
   position: relative;
   flex: 0 0 auto;
   overflow: hidden;
-  aspect-ratio: 16 / 7;
+  aspect-ratio: 16 / 9;
   background: var(--surface);
 }
 
@@ -560,7 +605,7 @@
   margin-bottom: 7px;
 }
 
-.home-worlds__card h3 {
+.home-worlds__card h4 {
   margin-bottom: 9px;
   font-size: clamp(1.35rem, 1.9vw, 1.8rem);
   line-height: 1.25;
@@ -570,6 +615,10 @@
   color: var(--bone-200);
   font-size: 13px;
   line-height: 1.6;
+}
+
+.home-worlds__xoltacan .home-worlds__card-copy > p:not(.home-worlds__meta) + p {
+  margin-top: 9px;
 }
 
 .home-worlds__card .home-worlds__links {
@@ -667,6 +716,153 @@
   max-width: 43ch;
   margin-bottom: 23px;
   color: var(--bone-200);
+}
+
+.home-live__calendar {
+  margin-block: 28px 24px;
+  padding-block: 18px;
+  border-block: 1px solid var(--line-strong);
+}
+
+.home-live__timezone {
+  margin-bottom: 10px;
+  color: var(--bone-300);
+  font: 600 11px/1.5 var(--font-ui);
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.home-live__week {
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--line);
+  list-style: none;
+}
+
+.home-live__day {
+  display: grid;
+  grid-template-columns: 82px minmax(0, 1fr);
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+  padding: 9px 8px;
+  border-bottom: 1px solid var(--line);
+  transition: background-color var(--quick) var(--ease-out), border-color var(--quick) var(--ease-out);
+}
+
+.home-live__day-name {
+  display: flex;
+  min-width: 0;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 6px;
+  color: var(--bone-200);
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.home-live__day-name:has(> .home-live__today-marker:not([hidden])) > .home-live__today-separator,
+.home-live__day-name:has(> .home-live__next-marker:not([hidden])) > .home-live__next-separator {
+  display: inline;
+}
+
+.home-live__today-separator,
+.home-live__next-separator {
+  display: none;
+}
+
+.home-live__slot {
+  display: flex;
+  min-width: 0;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px 10px;
+  color: var(--bone-100);
+  font-size: 13px;
+}
+
+.home-live__time {
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 4px;
+  align-items: center;
+  color: var(--brass-300);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.home-live__rest {
+  color: var(--bone-300);
+  font-size: 12px;
+}
+
+.home-live__day.is-today {
+  border-bottom-color: var(--line-strong);
+  background: rgba(228, 196, 139, .1);
+}
+
+.home-live__day.is-next {
+  border-inline-start: 2px solid var(--brass-300);
+}
+
+.home-live__day.is-today .home-live__day-name {
+  color: var(--bone-100);
+}
+
+.home-live__today-marker {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 2px;
+  padding: 1px 5px;
+  background: var(--brass-300);
+  color: var(--ink-950);
+  font: 700 10px/1.4 var(--font-ui);
+  letter-spacing: .03em;
+  text-transform: uppercase;
+}
+
+.home-live__next-marker {
+  border: 1px solid var(--line-strong);
+  border-radius: 2px;
+  padding: 1px 5px;
+  color: var(--brass-300);
+  font: 600 10px/1.4 var(--font-ui);
+  letter-spacing: .03em;
+  text-transform: uppercase;
+}
+
+.home-live__today-marker[hidden],
+.home-live__next-marker[hidden] {
+  display: none;
+}
+
+.home-live__next {
+  margin-block: 15px 11px;
+  padding: 10px 12px;
+  border-inline-start: 2px solid var(--brass-300);
+  background: rgba(13, 13, 14, .35);
+  color: var(--bone-100);
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.55;
+}
+
+.home-live__schedule-link {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  gap: 6px;
+  color: var(--brass-300);
+  font-size: 13px;
+  text-decoration: underline;
+  text-decoration-color: var(--line-strong);
+  text-underline-offset: 4px;
+}
+
+.home-live__schedule-link:hover {
+  text-decoration-color: var(--brass-300);
 }
 
 .home-archive {
@@ -930,16 +1126,17 @@
     max-width: 760px;
   }
 
-  .home-worlds__feature {
-    grid-column: 1 / -1;
-    min-height: clamp(500px, 68vw, 620px);
+  .home-worlds__group--adventures {
+    grid-template-columns: minmax(0, 1fr);
   }
 
-  .home-worlds__supporting {
-    grid-column: 1 / -1;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    grid-template-rows: minmax(0, 1fr);
-    gap: 18px;
+  .home-worlds__group--adventures > .home-worlds__feature,
+  .home-worlds__group--adventures > .home-worlds__xoltacan {
+    grid-column: 1;
+  }
+
+  .home-worlds__group--adventures > .home-worlds__feature {
+    min-height: clamp(500px, 68vw, 620px);
   }
 
   .home-worlds__card {
@@ -1116,9 +1313,14 @@
     gap: 12px;
   }
 
-  .home-worlds__layout {
+  .home-worlds__group--adventures,
+  .home-worlds__group--campaigns {
     grid-template-columns: minmax(0, 1fr);
     gap: 16px;
+  }
+
+  .home-worlds__group--campaigns {
+    margin-top: 32px;
   }
 
   .home-worlds__feature {
@@ -1132,7 +1334,7 @@
     position: relative;
     inset: auto;
     flex: 0 0 auto;
-    aspect-ratio: 4 / 5;
+    aspect-ratio: 16 / 9;
   }
 
   .home-worlds__feature-media img {
@@ -1165,13 +1367,6 @@
 
   .home-worlds__links .text-link {
     font-size: 12px;
-  }
-
-  .home-worlds__supporting {
-    grid-column: 1;
-    grid-template-columns: minmax(0, 1fr);
-    grid-template-rows: auto;
-    gap: 16px;
   }
 
   .home-worlds__card {
