@@ -21,7 +21,7 @@
   --font-title: 'Cinzel','Palatino Linotype','Book Antiqua',Georgia,serif;
   --font-ui: 'DM Sans','Segoe UI',Arial,sans-serif;
   --font-story:'Cormorant Garamond','Palatino Linotype',Georgia,serif;
-  --text-h1:62px;--text-h2:48px;--text-h3:40px;--text-h4:32px;--text-h5:26px;--text-h6:20px;--text-body:16px;--text-small:12px;
+  --text-h1:62px;--text-h2:48px;--text-h3:40px;--text-h4:32px;--text-h5:26px;--text-h6:20px;--text-body:16px;--text-small:12px;--text-button:14px;
   --radius-xs:2px;--radius-sm:4px;--radius-md:8px;
   --ease-out:cubic-bezier(.18,.65,.24,1);--ease-ritual:cubic-bezier(.2,.75,.24,1);
   --quick:160ms;--normal:240ms;--reveal:620ms;
