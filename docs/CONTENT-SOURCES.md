@@ -38,3 +38,5 @@ Comprobado directamente contra las APIs públicas (YouTube oEmbed, Discord invit
 - Música de ambiente: "Cathedral in the forest (ambient loop)" de congusbongus, OpenGameArt (https://opengameart.org/content/cathedral-in-the-forest-ambient-loop), licencia CC0. Original `forest_2.ogg` (2,9 MB, 2:17, 44,1 kHz estéreo) aportado por el propietario; fuera de Git en `tasks/audio-src/`.
 - Derivados (ffmpeg 9.0.2, gyan.dev): `assets/audio/ambiente.webm` (Opus 40k, 930 KB) y `assets/audio/ambiente.m4a` (AAC 64k, 1,1 MB, para Safari).
 - Uso: solo bajo demanda (botón junto al d20), apagado por defecto, sin autoplay.
+
+- Estado: Aventuras en Kuroto = finalizada (confirmado por el propietario el 2026-10-27; se está adaptando a novela, detalles pendientes).
