@@ -10,6 +10,9 @@ Tanda 1: 1-10 (done) · 2: 11-20 · 3: 21-30 · 4: 31-40 · 5: 41-50 · 6: 51-60
 - Character bible: tasks/art-src/biblia-personajes.md (includes merged additions of batches 2-4; later merges are appended there) and sheets in tasks/art-src/referencias/ (including *-tNN.png). Owner confirmed (2026-10-27): Hayate is a human with wings (keep the bible descriptor).
 - kuroto-novela/GUIA_ESTILO.md and the chapters in kuroto-novela/capitulos/.
 
+## Reading budget (important)
+The character bible is large (~53 KB, 90+ entries). Do NOT read it whole: a full read plus ten chapters exhausted the output budget in batch 14 (max_output_tokens). Search it (grep / Select-String for "## <Name>") and read only the entries of the characters present in the scenes you choose. Keep progress messages short.
+
 ## Your outputs (only these paths)
 - `tasks/art-src/lamina-NNN-attemptK.png` (PNG only; Claude exports WebP after review; do NOT write to assets/).
 - `tasks/art-src/tanda-NN.json`: JSON array of entries `{ "capitulo", "archivo": "lamina-NNN.webp", "alt", "pie", "fuente", "intento": K, "personajes": [...], "referencias_adjuntas": true|false }`.
