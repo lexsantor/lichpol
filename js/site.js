@@ -13,7 +13,16 @@
     menu.addEventListener('click',e=>{if(e.target.closest('a'))setMenu(false)});
     document.addEventListener('keydown',e=>{if(e.key==='Escape' && toggle.getAttribute('aria-expanded')==='true'){setMenu(false);toggle.focus()}});
     document.addEventListener('click',e=>{if(!e.target.closest('.header-inner') && toggle.getAttribute('aria-expanded')==='true')setMenu(false)});
-    matchMedia('(min-width:801px)').addEventListener('change',e=>{if(e.matches)setMenu(false)});
+    const menuDesktopQuery=matchMedia(toggle.closest('.home-header')?'(min-width:1024px)':'(min-width:801px)');
+    menuDesktopQuery.addEventListener('change',e=>{if(e.matches)setMenu(false)});
+  }
+  // Native details powers the desktop section dropdown; close it on dismissal or navigation.
+  const navGroup=$('.nav-group');
+  if(navGroup){
+    const summary=$('summary',navGroup);
+    navGroup.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{navGroup.open=false}));
+    document.addEventListener('click',e=>{if(!navGroup.contains(e.target))navGroup.open=false});
+    document.addEventListener('keydown',e=>{if(e.key==='Escape'&&navGroup.open){e.preventDefault();navGroup.open=false;summary?.focus()}});
   }
   // Browsable campaign filters. Never invent availability or alter URL to imply real server state.
   const filterButtons=$$('[data-filter]');

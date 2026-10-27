@@ -5,12 +5,11 @@ import {
   selectAudioSource,
 } from './ambience-core.js';
 
-const button = document.querySelector('.ambience-toggle');
-const stateLabel = button?.querySelector('[data-ambience-state]');
+const button = document.querySelector('.ambience-switch');
 const liveStatus = document.querySelector('#ambience-live');
 const AudioContextConstructor = window.AudioContext || window.webkitAudioContext;
 
-if (!button || !stateLabel || !liveStatus || !AudioContextConstructor) {
+if (!button || !liveStatus || !AudioContextConstructor) {
   // The hidden attribute in the HTML keeps this control unavailable without Web Audio.
 } else {
   const MASTER_GAIN = 0.35;
@@ -43,12 +42,11 @@ if (!button || !stateLabel || !liveStatus || !AudioContextConstructor) {
   button.hidden = false;
 
   function renderState({ error = false, announce = false } = {}) {
-    button.setAttribute('aria-pressed', String(userWantsPlayback));
+    button.setAttribute('aria-checked', String(userWantsPlayback));
     button.dataset.error = String(error);
-    stateLabel.textContent = error
+    if (announce) liveStatus.textContent = error
       ? 'No se pudo cargar la música'
       : (userWantsPlayback ? 'Activada' : 'Desactivada');
-    if (announce) liveStatus.textContent = error ? 'No se pudo cargar la música' : stateLabel.textContent;
     else if (!error) liveStatus.textContent = '';
   }
 
