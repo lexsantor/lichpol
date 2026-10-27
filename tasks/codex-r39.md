@@ -1,0 +1,44 @@
+# Codex task R39: Kuroto novel reader (sneak peek, chapters 1-3)
+
+Repo root: C:\Users\lexsa\Desktop\proyectos\lichpol. No commits. No browser tools (Claude verifies the rendered UI). Static site, no package.json, no dependencies (D1). Read design.md sections on typography/layout, css/tokens.css, css/site.css, the header part of css/home.css and index.html before editing.
+
+## Objective
+The owner wants the finished campaign "Aventuras en Kuroto" readable as a novel inside the site, like an interactive book. This round is a SNEAK PEEK: build the full machinery, but publish only chapters 1-3. Claude will show it locally; the remaining chapters are generated later with the same script.
+
+## Source (read-only, do not edit anything in kuroto-novela/)
+- kuroto-novela/indice.json: `libros[]` {numero, titulo, desde, hasta, capitulos[], palabras}; `capitulos[]` {numero, libro, titulo, titulo_sesion, archivo, palabras, escenas, video, fuentes, escenas_discord}; optional future field `interludio: true` (not present yet, chapter 132 may get it).
+- kuroto-novela/capitulos/NNN.md (181 files, 001-182, no 092): YAML front matter between `---` lines (capitulo, sesion, titulo, ...), then one `# Title` line, then prose. Markdown subset ONLY: blank-line separated paragraphs, `* * *` alone on a line = scene break, `*text*` = italic (thoughts, ship/book names). Dialogue uses straight double quotes; keep them exactly as written (editorial RAE decision; do NOT convert to curly quotes or dashes).
+- kuroto-novela/GUIA_ESTILO.md and INFORME_EDITORIAL.md for context.
+
+## Deliverables
+1. `tools/novela-build.mjs` (Node, stdlib only, ESM). Exports pure functions (front matter parse, markdown subset to HTML, page templates) and runs when executed directly. Usage: `node tools/novela-build.mjs --limit 3` builds chapters with numero <= 3; without `--limit` builds all.
+   - Always parses and validates ALL 181 chapters regardless of --limit, and exits non-zero with a clear list on any error: front matter present and `capitulo` matches file number and indice.json entry; exactly one `# ` title line matching the front-matter titulo; non-empty body; `* * *` only on its own line; no unbalanced `*` left after italic conversion; every indice.json chapter has its file and vice versa. Print a one-line summary (chapters validated, pages written).
+   - HTML-escape all text first, then convert italics. Paragraphs -> `<p>`, scene break -> a decorative separator element with `role="separator"` (or `<hr>`) styled as an ornament, not literal asterisks.
+   - Output (committed generated files): `novela/kuroto/index.html` (table of contents) and `novela/kuroto/001.html`, `002.html`, `003.html`. Use relative paths to ../../css, ../../js, ../../assets so it works on any host root and on a local static server.
+2. `css/novela.css` (new) built only from existing tokens. Add an `@font-face` for `assets/fonts/cormorant-garamond-latin-500-normal.woff2` (already downloaded, OFL; license file assets/fonts/OFL-cormorant-garamond.txt already present) with font-display: swap; reuse the existing italic face declaration if one exists, otherwise declare it too. Check where the existing Cormorant italic @font-face lives and follow that pattern.
+3. `js/novela.js` (new, progressive enhancement, page must be fully readable and navigable without JS):
+   - Thin reading progress bar at the top of chapter pages (transform scaleX, no layout animation; static under prefers-reduced-motion is fine).
+   - ArrowLeft / ArrowRight go to prev/next chapter when focus is not in a form control and no modifier key is pressed.
+   - Remembers the last chapter opened (localStorage key `lichpol:kuroto:ultimo`, wrapped in try/catch). On the TOC page, if present and that chapter is published, show a "Continuar: Capítulo N · Título" link next to "Empezar a leer".
+4. Card CTA in index.html (Kuroto card only): add a third link in `.home-worlds__links` after "Capítulo 1": text "Leer novela", href `novela/kuroto/`, same `.text-link` class, internal link so NO external icon and NO "(se abre en una pestaña nueva)" span. No other copy change. Ensure the row still wraps cleanly at 320px.
+5. `.vercelignore`: allow the generated pages to deploy: add `!novela/**/*.html` after the `*.html` / `!index.html` lines. Keep `*.md` excluded (sources must not be published).
+6. `tests/novela.test.mjs`: node:test unit tests for the parser (escape, italics, scene break, paragraphs, front matter, validation catches a bad title / stray asterisk) plus one test that runs the validation over the real kuroto-novela/ folder and expects 0 errors.
+
+## Page design (book feel, inside the Lichpol style)
+- Header: same header as index.html (brand, La Taberna dropdown, Aventuras, music switch, Twitch CTA, mobile drawer), with section links rewritten to `../../index.html#dungeon-master` etc. and the brand linking to `../../index.html`. Load tokens.css, site.css, home.css (header styles live there; reuse, do not duplicate) and novela.css; site.js for the drawer/dropdown. The header must render solid (not the hero overlay state). If js/ambience.js works standalone with the same switch markup and audio paths resolve, include it so music works while reading; otherwise keep the switch `hidden`. Do NOT add a nav item for the novel (the reserved slot is for a future "Personajes" page, D12). Include the same icon sprite the header needs and a skip link.
+- TOC page (`novela/kuroto/index.html`): hero using the existing Kuroto cover (assets/kuroto*.webp, same srcset pattern), H1 "Kuroto", subtitle in the story font identifying it as the novel of the campaign, a short factual intro (the campaign streamed live in Twitch, adapted to prose; no invented facts), primary button "Empezar a leer" -> 001.html, secondary text link "Ver la campaña en YouTube" (existing playlist URL from the card, external icon pattern). Then the ten books as sections ("Libro I", roman numerals, and the book title), each listing all its chapters: number + title. Published chapters (<= limit) are links; unpublished ones are rendered as muted plain text (not links, not focusable) with a single visible note per page like "Próximamente" that explains it, so the full structure is visible in the sneak peek. Chapter flagged interludio (if the field ever appears) gets an "Interludio" label.
+- Chapter page (`NNN.html`): breadcrumb (Lichpol > Kuroto > Libro N), eyebrow "Libro I · Los cazadores de Ukio", "Capítulo 1", H1 = chapter title (only one h1), small meta line with approximate reading time (palabras / 230, rounded, "min de lectura"). Prose column max-width var(--reading), font var(--font-story) weight 500 at 20px (--text-h6, PROPOSED to the owner), line-height around 1.6, colour --fg, paragraph spacing via first-line indent or margin (choose the more book-like and say which), drop cap on the first paragraph in Cinzel brass (must not break screen readers or wrap badly at 320px). Scene break ornament in brass, centered. End of chapter: secondary link "Ver el directo original" (indice `video` URL, external pattern), then prev/next navigation as two large tappable blocks (direction label + chapter title), and "Índice" link back to the TOC. Prev of chapter 1 goes to the TOC; next of the last published chapter shows the next title as non-link "Próximamente" in the sneak peek. Use `rel="prev"/"next"` on links.
+- Head: lang es, `<title>` "Capítulo 1 · El bosque de cuchillas | Kuroto, la novela | Lichpol", meta description = first ~150 chars of the prose (escaped, cut on a word boundary), og:title/description/og:image (Kuroto cover on https://lichpol.vercel.app/assets/kuroto.webp), theme-color, favicon, preload only Cormorant upright. No canonical (D6).
+- Dark only, like the site. Contrast >= 4.5:1 for all text. Focus visible on every interactive element (reuse site focus styles). Touch targets >= 44px. No horizontal scroll at 320px. prefers-reduced-motion respected.
+
+## Protected (do not change)
+Accepted decisions D7, D9, D10, D11, D12 in tasks/todo.md: type scale tokens (do not add new size tokens; 20px is the existing --text-h6), header behavior and typography, card layout, music switch, everything in index.html except the one new link. No edits to kuroto-novela/.
+
+## Acceptance
+- `node tools/novela-build.mjs --limit 3` -> validates 181 chapters with 0 errors, writes 4 pages.
+- `node --test tests/d20.test.mjs tests/schedule.test.mjs tests/ambience.test.mjs tests/novela.test.mjs` all pass.
+- Report: files created/changed, the paragraph-spacing choice, whether ambience runs on the novel pages, and any validation findings in the sources (report, do not fix sources).
+
+## Stop and escalate (do not decide silently)
+- Any validation error in the real sources that would require editing kuroto-novela/.
+- If reusing the header requires changing home.css rules that affect the home page.

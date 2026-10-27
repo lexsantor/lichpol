@@ -248,7 +248,8 @@ if (!button || !liveStatus || !AudioContextConstructor) {
   async function fetchAndDecode(context) {
     const audio = document.createElement('audio');
     const path = selectAudioSource(type => audio.canPlayType(type));
-    const response = await fetch(path);
+    const audioUrl = new URL(`../${path}`, import.meta.url);
+    const response = await fetch(audioUrl);
     if (!response.ok) throw new Error(`Audio request failed: ${response.status}`);
     return decodeAudioData(context, await response.arrayBuffer());
   }

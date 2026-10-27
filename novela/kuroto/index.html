@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="es" class="novela-html">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#0D0D0E">
+  <title>Kuroto, la novela | Lichpol</title>
+  <meta name="description" content="La novela de la campaña Aventuras en Kuroto. La historia, emitida en directo por Twitch, adaptada a prosa.">
+  <meta property="og:title" content="Kuroto, la novela | Lichpol">
+  <meta property="og:description" content="La novela de la campaña Aventuras en Kuroto. La historia, emitida en directo por Twitch, adaptada a prosa.">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:image" content="https://lichpol.vercel.app/assets/kuroto.webp">
+  <meta property="og:image:alt" content="Portada de Aventuras en Kuroto: monte nevado y cerezos en flor en estilo de grabado japonés">
+  <link rel="icon" type="image/svg+xml" href="../../assets/lichpol-logo-color.svg">
+  
+  <link rel="stylesheet" href="../../css/tokens.css">
+  <link rel="stylesheet" href="../../css/site.css">
+  <link rel="stylesheet" href="../../css/home.css">
+  <link rel="stylesheet" href="../../css/novela.css">
+  <script defer src="../../js/site.js"></script>
+  <script type="module" src="../../js/novela.js"></script>
+  <script type="module" src="../../js/ambience.js"></script>
+</head>
+<body class="novela-page novela-index" data-published-chapters="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182">
+  <!-- Iconos: sprite de la cabecera Lichpol. -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+    <symbol id="i-twitch" viewBox="0 0 2400 2800" fill="currentColor"><path d="M500 0 0 500v1800h600v500l500-500h400l900-900V0H500zm1700 1300-400 400h-400l-350 350v-350H600V200h1600v1100z"/><path d="M1700 550h200v600h-200zm-550 0h200v600h-200z"/></symbol>
+    <symbol id="i-youtube" viewBox="0 0 256 180" fill="currentColor"><path fill-rule="evenodd" d="M250.346 28.075A32.18 32.18 0 0 0 227.69 5.418C207.824 0 127.87 0 127.87 0S47.912.164 28.046 5.582A32.18 32.18 0 0 0 5.39 28.24c-6.009 35.298-8.34 89.084.165 122.97a32.18 32.18 0 0 0 22.656 22.657c19.866 5.418 99.822 5.418 99.822 5.418s79.955 0 99.82-5.418a32.18 32.18 0 0 0 22.657-22.657c6.338-35.348 8.291-89.1-.164-123.134ZM102.421 128.06l66.328-38.418-66.328-38.418z"/></symbol>
+    <symbol id="i-external" viewBox="0 0 24 24" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M9 6.75C8.58579 6.75 8.25 6.41421 8.25 6C8.25 5.58579 8.58579 5.25 9 5.25H18C18.4142 5.25 18.75 5.58579 18.75 6V15C18.75 15.4142 18.4142 15.75 18 15.75C17.5858 15.75 17.25 15.4142 17.25 15V7.81066L6.53033 18.5303C6.23744 18.8232 5.76256 18.8232 5.46967 18.5303L5.46967 18.5303C5.17678 18.2374 5.17678 17.7626 5.46967 17.4697L16.1893 6.75H9Z" fill="currentColor"/></symbol>
+    <symbol id="i-speaker-off" viewBox="0 0 24 24" fill="none"><path d="M11 5 6 9H3v6h3l5 4V5Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="m16 9 5 6m0-6-5 6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+    <symbol id="i-speaker-on" viewBox="0 0 24 24" fill="none"><path d="M11 5 6 9H3v6h3l5 4V5Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="M15.5 8.5a5 5 0 0 1 0 7m3-10a9 9 0 0 1 0 13" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+  </svg>
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+  <header class="site-header home-header">
+    <div class="container header-inner">
+      <a class="brand" href="../../index.html" aria-label="Lichpol, The Arcane Tavern: inicio">
+        <img src="../../assets/lichpol-logo-white.svg" alt="" width="48" height="48">
+        <span class="brand-stack"><strong>LICHPOL</strong><small>THE ARCANE TAVERN</small></span>
+      </a>
+      <div class="header-controls">
+        <button class="ambience-switch" type="button" role="switch" aria-checked="false" aria-label="Música de ambiente" aria-busy="false" hidden>
+          <span class="ambience-switch__track" aria-hidden="true"><span class="ambience-switch__knob">
+            <svg class="icon ambience-switch__icon ambience-switch__icon--off" focusable="false"><use href="#i-speaker-off"/></svg>
+            <svg class="icon ambience-switch__icon ambience-switch__icon--on" focusable="false"><use href="#i-speaker-on"/></svg>
+          </span></span>
+        </button>
+        <a class="btn btn-primary btn-sm header-cta" href="https://www.twitch.tv/lichpol_gamer" target="_blank" rel="noopener noreferrer">
+          <svg class="icon icon--twitch" aria-hidden="true" focusable="false"><use href="#i-twitch"/></svg> Ver en Twitch <svg class="icon icon--external" aria-hidden="true" focusable="false"><use href="#i-external"/></svg><span class="visually-hidden">(se abre en una pestaña nueva)</span>
+        </a>
+        <button class="menu-toggle" type="button" data-menu-toggle aria-controls="main-menu" aria-expanded="false" aria-label="Abrir menú">☰</button>
+      </div>
+      <nav class="site-nav" id="main-menu" aria-label="Navegación principal">
+        <details class="nav-group">
+          <summary>La Taberna <svg class="icon nav-group__chevron" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+          <ul class="nav-group__panel">
+            <li><a href="../../index.html#dungeon-master">El Dungeon Master</a></li>
+            <li><a href="../../index.html#campanas">Campañas</a></li>
+            <li><a href="../../index.html#cronicas">Crónicas</a></li>
+            <li><a href="../../index.html#comunidad">Comunidad</a></li>
+          </ul>
+        </details>
+        <div class="nav-mobile-group">
+          <p class="nav-drawer-label">La Taberna</p>
+          <ul class="nav-mobile-links">
+            <li><a href="../../index.html#dungeon-master">El Dungeon Master</a></li>
+            <li><a href="../../index.html#campanas">Campañas</a></li>
+            <li><a href="../../index.html#cronicas">Crónicas</a></li>
+            <li><a href="../../index.html#comunidad">Comunidad</a></li>
+          </ul>
+        </div>
+        <a class="nav-adventure" href="https://khr0mz.github.io/arghast/" target="_blank" rel="noopener noreferrer">Aventuras <svg class="icon icon--external" aria-hidden="true" focusable="false"><use href="#i-external"/></svg><span class="visually-hidden">(se abre en una pestaña nueva)</span></a>
+        <a class="btn btn-primary btn-sm nav-drawer-cta" href="https://www.twitch.tv/lichpol_gamer" target="_blank" rel="noopener noreferrer"><svg class="icon icon--twitch" aria-hidden="true" focusable="false"><use href="#i-twitch"/></svg> Ver en Twitch <svg class="icon icon--external" aria-hidden="true" focusable="false"><use href="#i-external"/></svg><span class="visually-hidden">(se abre en una pestaña nueva)</span></a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" class="novela-main">
+    <section class="hero hero--inner hero--kuroto novela-hero" aria-labelledby="novela-title">
+      <img class="novela-hero__image" src="../../assets/kuroto.webp" srcset="../../assets/kuroto-640.webp 640w, ../../assets/kuroto-960.webp 960w, ../../assets/kuroto.webp 1672w" sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 42vw" width="1672" height="941" alt="Portada de Aventuras en Kuroto: monte nevado y cerezos en flor en estilo de grabado japonés" fetchpriority="high" decoding="async">
+      <div class="container hero-main">
+        <div class="hero-copy novela-hero__copy">
+          <p class="eyebrow">La novela</p>
+          <h1 id="novela-title">Aventuras en Kuroto</h1>
+          <p class="novela-hero__lead">La campaña que se jugó en directo en Twitch, contada como novela en diez libros.</p>
+          <div class="button-row novela-hero__actions">
+            <a class="btn btn-primary" href="001.html">Empezar a leer</a>
+            <a class="text-link novela-external-link" href="https://www.youtube.com/playlist?list=PLelQK3I2Q5zymJZ2e2SNmwxsnnFGjBCYb" target="_blank" rel="noopener noreferrer">Ver la campaña en YouTube <svg class="icon icon--external" aria-hidden="true" focusable="false"><use href="#i-external"/></svg><span class="visually-hidden">(se abre en una pestaña nueva)</span></a>
+            <a class="text-link novela-hero__continue" href="001.html" data-continue-reading hidden></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="container novela-library" aria-label="Índice de libros y capítulos">
+      
+      <div class="novela-book-grid">
+      <section class="novela-book" id="libro-1" aria-labelledby="libro-1-titulo">
+        <p class="eyebrow">Libro I</p>
+        <h2 id="libro-1-titulo">Los cazadores de Ukio</h2>
+        <ol class="novela-chapter-list">
+          <li><a class="novela-chapter-link" href="001.html" data-chapter-number="1"><span class="novela-chapter-number">Capítulo 1</span><span class="novela-chapter-title">El bosque de cuchillas</span></a></li>
+          <li><a class="novela-chapter-link" href="002.html" data-chapter-number="2"><span class="novela-chapter-number">Capítulo 2</span><span class="novela-chapter-title">Contrato de limpieza</span></a></li>
+          <li><a class="novela-chapter-link" href="003.html" data-chapter-number="3"><span class="novela-chapter-number">Capítulo 3</span><span class="novela-chapter-title">No podemos descansar</span></a></li>
+          <li><a class="novela-chapter-link" href="004.html" data-chapter-number="4"><span class="novela-chapter-number">Capítulo 4</span><span class="novela-chapter-title">Un burdel espeluznante</span></a></li>
+          <li><a class="novela-chapter-link" href="005.html" data-chapter-number="5"><span class="novela-chapter-number">Capítulo 5</span><span class="novela-chapter-title">Sueños de borrachos</span></a></li>
+          <li><a class="novela-chapter-link" href="006.html" data-chapter-number="6"><span class="novela-chapter-number">Capítulo 6</span><span class="novela-chapter-title">El ronin y el yokai</span></a></li>
+          <li><a class="novela-chapter-link" href="007.html" data-chapter-number="7"><span class="novela-chapter-number">Capítulo 7</span><span class="novela-chapter-title">Una aldea abandonada</span></a></li>
+          <li><a class="novela-chapter-link" href="008.html" data-chapter-number="8"><span class="novela-chapter-number">Capítulo 8</span><span class="novela-chapter-title">¿Dónde está el gato?</span></a></li>
+          <li><a class="novela-chapter-link" href="009.html" data-chapter-number="9"><span class="novela-chapter-number">Capítulo 9</span><span class="novela-chapter-title">La venganza de los sacerdotes</span></a></li>
+          <li><a class="novela-chapter-link" href="010.html" data-chapter-number="10"><span class="novela-chapter-number">Capítulo 10</span><span class="novela-chapter-title">Sopa de tortuga</span></a></li>
+          <li><a class="novela-chapter-link" href="011.html" data-chapter-number="11"><span class="novela-chapter-number">Capítulo 11</span><span class="novela-chapter-title">Se avecina tormenta</span></a></li>
+          <li><a class="novela-chapter-link" href="012.html" data-chapter-number="12"><span class="novela-chapter-number">Capítulo 12</span><span class="novela-chapter-title">Un montón de cosas</span></a></li>
+          <li><a class="novela-chapter-link" href="013.html" data-chapter-number="13"><span class="novela-chapter-number">Capítulo 13</span><span class="novela-chapter-title">El torneo</span></a></li>
+        </ol>
+      </section>
+      <section class="novela-book" id="libro-2" aria-labelledby="libro-2-titulo">
+        <p class="eyebrow">Libro II</p>
+        <h2 id="libro-2-titulo">El favor del shogun</h2>
+        <ol class="novela-chapter-list">
+          <li><a class="novela-chapter-link" href="014.html" data-chapter-number="14"><span class="novela-chapter-number">Capítulo 14</span><span class="novela-chapter-title">Consecuencias</span></a></li>
+          <li><a class="novela-chapter-link" href="015.html" data-chapter-number="15"><span class="novela-chapter-number">Capítulo 15</span><span class="novela-chapter-title">Atrapa al ladrón</span></a></li>
+          <li><a class="novela-chapter-link" href="016.html" data-chapter-number="16"><span class="novela-chapter-number">Capítulo 16</span><span class="novela-chapter-title">Cuanto más comas</span></a></li>
+          <li><a class="novela-chapter-link" href="017.html" data-chapter-number="17"><span class="novela-chapter-number">Capítulo 17</span><span class="novela-chapter-title">Fuego</span></a></li>
+          <li><a class="novela-chapter-link" href="018.html" data-chapter-number="18"><span class="novela-chapter-number">Capítulo 18</span><span class="novela-chapter-title">Tierra removida</span></a></li>
+          <li><a class="novela-chapter-link" href="019.html" data-chapter-number="19"><span class="novela-chapter-number">Capítulo 19</span><span class="novela-chapter-title">Entrenar a mi kender</span></a></li>
+          <li><a class="novela-chapter-link" href="020.html" data-chapter-number="20"><span class="novela-chapter-number">Capítulo 20</span><span class="novela-chapter-title">Un viaje movidito</span></a></li>
+          <li><a class="novela-chapter-link" href="021.html" data-chapter-number="21"><span class="novela-chapter-number">Capítulo 21</span><span class="novela-chapter-title">Sustos</span></a></li>
+          <li><a class="novela-chapter-link" href="022.html" data-chapter-number="22"><span class="novela-chapter-number">Capítulo 22</span><span class="novela-chapter-title">Mapaches en peligro</span></a></li>
+          <li><a class="novela-chapter-link" href="023.html" data-chapter-number="23"><span class="novela-chapter-number">Capítulo 23</span><span class="novela-chapter-title">Un favor para el shogun</span></a></li>
+          <li><a class="novela-chapter-link" href="024.html" data-chapter-number="24"><span class="novela-chapter-number">Capítulo 24</span><span class="novela-chapter-title">Local clandestino</span></a></li>
+          <li><a class="novela-chapter-link" href="025.html" data-chapter-number="25"><span class="novela-chapter-number">Capítulo 25</span><span class="novela-chapter-title">Un funcionario respetable</span></a></li>
+          <li><a class="novela-chapter-link" href="026.html" data-chapter-number="26"><span class="novela-chapter-number">Capítulo 26</span><span class="novela-chapter-title">Malos sueños</span></a></li>
+          <li><a class="novela-chapter-link" href="027.html" data-chapter-number="27"><span class="novela-chapter-number">Capítulo 27</span><span class="novela-chapter-title">El torneo de Sho</span></a></li>
+          <li><a class="novela-chapter-link" href="028.html" data-chapter-number="28"><span class="novela-chapter-number">Capítulo 28</span><span class="novela-chapter-title">La venganza de los gatitos</span></a></li>
+          <li><a class="novela-chapter-link" href="029.html" data-chapter-number="29"><span class="novela-chapter-number">Capítulo 29</span><span class="novela-chapter-title">Un carpintero en apuros</span></a></li>
+          <li><a class="novela-chapter-link" href="030.html" data-chapter-number="30"><span class="novela-chapter-number">Capítulo 30</span><span class="novela-chapter-title">Limpiar las cañerías</span></a></li>
+          <li><a class="novela-chapter-link" href="031.html" data-chapter-number="31"><span class="novela-chapter-number">Capítulo 31</span><span class="novela-chapter-title">Peligro en el camino</span></a></li>
+        </ol>
+      </section>
+      <section class="novela-book" id="libro-3" aria-labelledby="libro-3-titulo">
+        <p class="eyebrow">Libro III</p>
+        <h2 id="libro-3-titulo">La boda del shogun</h2>
+        <ol class="novela-chapter-list">
+          <li><a class="novela-chapter-link" href="032.html" data-chapter-number="32"><span class="novela-chapter-number">Capítulo 32</span><span class="novela-chapter-title">La boda del shogun</span></a></li>
+          <li><a class="novela-chapter-link" href="033.html" data-chapter-number="33"><span class="novela-chapter-number">Capítulo 33</span><span class="novela-chapter-title">Huérfano de fuego</span></a></li>
+          <li><a class="novela-chapter-link" href="034.html" data-chapter-number="34"><span class="novela-chapter-number">Capítulo 34</span><span class="novela-chapter-title">La feria de Ukio</span></a></li>
+          <li><a class="novela-chapter-link" href="035.html" data-chapter-number="35"><span class="novela-chapter-number">Capítulo 35</span><span class="novela-chapter-title">Un robo en la casa del noble</span></a></li>
+          <li><a class="novela-chapter-link" href="036.html" data-chapter-number="36"><span class="novela-chapter-number">Capítulo 36</span><span class="novela-chapter-title">En las profundidades del bosque</span></a></li>
+          <li><a class="novela-chapter-link" href="037.html" data-chapter-number="37"><span class="novela-chapter-number">Capítulo 37</span><span class="novela-chapter-title">Las sombras del pasado</span></a></li>
+          <li><a class="novela-chapter-link" href="038.html" data-chapter-number="38"><span class="novela-chapter-number">Capítulo 38</span><span class="novela-chapter-title">Un lío pegajoso</span></a></li>
+          <li><a class="novela-chapter-link" href="039.html" data-chapter-number="39"><span class="novela-chapter-number">Capítulo 39</span><span class="novela-chapter-title">Acampar en el camino</span></a></li>
+          <li><a class="novela-chapter-link" href="040.html" data-chapter-number="40"><span class="novela-chapter-number">Capítulo 40</span><span class="novela-chapter-title">El bibliotecario</span></a></li>
+          <li><a class="novela-chapter-link" href="041.html" data-chapter-number="41"><span class="novela-chapter-number">Capítulo 41</span><span class="novela-chapter-title">Desde lo profundo</span></a></li>
+          <li><a class="novela-chapter-link" href="042.html" data-chapter-number="42"><span class="novela-chapter-number">Capítulo 42</span><span class="novela-chapter-title">El instructor</span></a></li>
+          <li><a class="novela-chapter-link" href="043.html" data-chapter-number="43"><span class="novela-chapter-number">Capítulo 43</span><span class="novela-chapter-title">Problemas de geishas</span></a></li>
+        </ol>
+      </section>
+      <section class="novela-book" id="libro-4" aria-labelledby="libro-4-titulo">
+        <p class="eyebrow">Libro IV</p>
+        <h2 id="libro-4-titulo">Los guardianes del Oeste y del Este</h2>
+        <ol class="novela-chapter-list">
+          <li><a class="novela-chapter-link" href="044.html" data-chapter-number="44"><span class="novela-chapter-number">Capítulo 44</span><span class="novela-chapter-title">El guardián del Oeste</span></a></li>
+          <li><a class="novela-chapter-link" href="045.html" data-chapter-number="45"><span class="novela-chapter-number">Capítulo 45</span><span class="novela-chapter-title">Devuélveme mi alma</span></a></li>
+          <li><a class="novela-chapter-link" href="046.html" data-chapter-number="46"><span class="novela-chapter-number">Capítulo 46</span><span class="novela-chapter-title">Las pruebas del Rey Mono</span></a></li>
+          <li><a class="novela-chapter-link" href="047.html" data-chapter-number="47"><span class="novela-chapter-number">Capítulo 47</span><span class="novela-chapter-title">Los cerezos malditos</span></a></li>
+          <li><a class="novela-chapter-link" href="048.html" data-chapter-number="48"><span class="novela-chapter-number">Capítulo 48</span><span class="novela-chapter-title">Miau</span></a></li>
+          <li><a class="novela-chapter-link" href="049.html" data-chapter-number="49"><span class="novela-chapter-number">Capítulo 49</span><span class="novela-chapter-title">Baku</span></a></li>
+          <li><a class="novela-chapter-link" href="050.html" data-chapter-number="50"><span class="novela-chapter-number">Capítulo 50</span><span class="novela-chapter-title">El guardián del Este</span></a></li>
+          <li><a class="novela-chapter-link" href="051.html" data-chapter-number="51"><span class="novela-chapter-number">Capítulo 51</span><span class="novela-chapter-title">El segundo torneo de Ukio</span></a></li>
+          <li><a class="novela-chapter-link" href="052.html" data-chapter-number="52"><span class="novela-chapter-number">Capítulo 52</span><span class="novela-chapter-title">Nieve en verano</span></a></li>
+          <li><a class="novela-chapter-link" href="053.html" data-chapter-number="53"><span class="novela-chapter-number">Capítulo 53</span><span class="novela-chapter-title">El cubil</span></a></li>
+          <li><a class="novela-chapter-link" href="054.html" data-chapter-number="54"><span class="novela-chapter-number">Capítulo 54</span><span class="novela-chapter-title">Rojo</span></a></li>
+          <li><a class="novela-chapter-link" href="055.html" data-chapter-number="55"><span class="novela-chapter-number">Capítulo 55</span><span class="novela-chapter-title">El mar de Kyushu</span></a></li>
+          <li><a class="novela-chapter-link" href="056.html" data-chapter-number="56"><span class="novela-chapter-number">Capítulo 56</span><span class="novela-chapter-title">Diplomacia pasada por agua</span></a></li>
+          <li><a class="novela-chapter-link" href="057.html" data-chapter-number="57"><span class="novela-chapter-number">Capítulo 57</span><span class="novela-chapter-title">Cosas brillantes</span></a></li>
+          <li><a class="novela-chapter-link" href="058.html" data-chapter-number="58"><span class="novela-chapter-number">Capítulo 58</span><span class="novela-chapter-title">El bardo legendario</span></a></li>
+          <li><a class="novela-chapter-link" href="059.html" data-chapter-number="59"><span class="novela-chapter-number">Capítulo 59</span><span class="novela-chapter-title">La espada de cristal</span></a></li>
+          <li><a class="novela-chapter-link" href="060.html" data-chapter-number="60"><span class="novela-chapter-number">Capítulo 60</span><span class="novela-chapter-title">Los protectores de los guardianes</span></a></li>
+          <li><a class="novela-chapter-link" href="061.html" data-chapter-number="61"><span class="novela-chapter-number">Capítulo 61</span><span class="novela-chapter-title">Temporada de caza</span></a></li>
+          <li><a class="novela-chapter-link" href="062.html" data-chapter-number="62"><span class="novela-chapter-number">Capítulo 62</span><span class="novela-chapter-title">Bruja de sangre</span></a></li>
+          <li><a class="novela-chapter-link" href="063.html" data-chapter-number="63"><span class="novela-chapter-number">Capítulo 63</span><span class="novela-chapter-title">Laboratorio experimental</span></a></li>
+        </ol>
+      </section>
+      <section class="novela-book" id="libro-5" aria-labelledby="libro-5-titulo">
+        <p class="eyebrow">Libro V</p>
+        <h2 id="libro-5-titulo">Los guardianes del Norte y del Sur</h2>
+        <ol class="novela-chapter-list">
+          <li><a class="novela-chapter-link" href="064.html" data-chapter-number="64"><span class="novela-chapter-number">Capítulo 64</span><span class="novela-chapter-title">El guardián del norte</span></a></li>
+          <li><a class="novela-chapter-link" href="065.html" data-chapter-number="65"><span class="novela-chapter-number">Capítulo 65</span><span class="novela-chapter-title">Controlar las llamas</span></a></li>
+          <li><a class="novela-chapter-link" href="066.html" data-chapter-number="66"><span class="novela-chapter-number">Capítulo 66</span><span class="novela-chapter-title">El segundo torneo de Sho</span></a></li>
+          <li><a class="novela-chapter-link" href="067.html" data-chapter-number="67"><span class="novela-chapter-number">Capítulo 67</span><span class="novela-chapter-title">Estafa en la casa de inversiones</span></a></li>
+          <li><a class="novela-chapter-link" href="068.html" data-chapter-number="68"><span class="novela-chapter-number">Capítulo 68</span><span class="novela-chapter-title">Problemas en Liber</span></a></li>
+          <li><a class="novela-chapter-link" href="069.html" data-chapter-number="69"><span class="novela-chapter-number">Capítulo 69</span><span class="novela-chapter-title">Sueños en llamas</span></a></li>
+          <li><a class="novela-chapter-link" href="070.html" data-chapter-number="70"><span class="novela-chapter-number">Capítulo 70</span><span class="novela-chapter-title">Vuelta a casa</span></a></li>
+          <li><a class="novela-chapter-link" href="071.html" data-chapter-number="71"><span class="novela-chapter-number">Capítulo 71</span><span class="novela-chapter-title">Wakare no Yama</span></a></li>
+          <li><a class="novela-chapter-link" href="072.html" data-chapter-number="72"><span class="novela-chapter-number">Capítulo 72</span><span class="novela-chapter-title">El Rey Mono</span></a></li>
+          <li><a class="novela-chapter-link" href="073.html" data-chapter-number="73"><span class="novela-chapter-number">Capítulo 73</span><span class="novela-chapter-title">Mis yokai</span></a></li>
+          <li><a class="novela-chapter-link" href="074.html" data-chapter-number="74"><span class="novela-chapter-number">Capítulo 74</span><span class="novela-chapter-title">El último bastión</span></a></li>
+          <li><a class="novela-chapter-link" href="075.html" data-chapter-number="75"><span class="novela-chapter-number">Capítulo 75</span><span class="novela-chapter-title">El balneario</span></a></li>
+          <li><a class="novela-chapter-link" href="076.html" data-chapter-number="76"><span class="novela-chapter-number">Capítulo 76</span><span class="novela-chapter-title">El guardián del sur</span></a></li>
+          <li><a class="novela-chapter-link" href="077.html" data-chapter-number="77"><span class="novela-chapter-number">Capítulo 77</span><span class="novela-chapter-title">Una Navidad en Ukio</span></a></li>
+          <li><a class="novela-chapter-link" href="078.html" data-chapter-number="78"><span class="novela-chapter-number">Capítulo 78</span><span class="novela-chapter-title">El destino de Sirth</span></a></li>
+          <li><a class="novela-chapter-link" href="079.html" data-chapter-number="79"><span class="novela-chapter-number">Capítulo 79</span><span class="novela-chapter-title">El último guardián</span></a></li>
+        </ol>
+      </section>
+      <section class="novela-book" id="libro-6" aria-labelledby="libro-6-titulo">
+        <p class="eyebrow">Libro VI</p>
+        <h2 id="libro-6-titulo">La Puerta Negra</h2>
+        <ol class="novela-chapter-list">
+          <li><a class="novela-chapter-link" href="080.html" data-chapter-number="80"><span class="novela-chapter-number">Capítulo 80</span><span class="novela-chapter-title">Suertelandia</span></a></li>
+          <li><a class="novela-chapter-link" href="081.html" data-chapter-number="81"><span class="novela-chapter-number">Capítulo 81</span><span class="novela-chapter-title">El héroe del pueblo</span></a></li>
+          <li><a class="novela-chapter-link" href="082.html" data-chapter-number="82"><span class="novela-chapter-number">Capítulo 82</span><span class="novela-chapter-title">La comandante</span></a></li>
+          <li><a class="novela-chapter-link" href="083.html" data-chapter-number="83"><span class="novela-chapter-number">Capítulo 83</span><span class="novela-chapter-title">El juicio</span></a></li>
+          <li><a class="novela-chapter-link" href="084.html" data-chapter-number="84"><span class="novela-chapter-number">Capítulo 84</span><span class="novela-chapter-title">¿Dónde está Gur?</span></a></li>
+          <li><a class="novela-chapter-link" href="085.html" data-chapter-number="85"><span class="novela-chapter-number">Capítulo 85</span><span class="novela-chapter-title">Plegarias de bondad</span></a></li>
+          <li><a class="novela-chapter-link" href="086.html" data-chapter-number="86"><span class="novela-chapter-number">Capítulo 86</span><span class="novela-chapter-title">El rey Selina</span></a></li>
+          <li><a class="novela-chapter-link" href="087.html" data-chapter-number="87"><span class="novela-chapter-number">Capítulo 87</span><span class="novela-chapter-title">Lágrimas de fuego</span></a></li>
+          <li><a class="novela-chapter-link" href="088.html" data-chapter-number="88"><span class="novela-chapter-number">Capítulo 88</span><span class="novela-chapter-title">Manchas del pasado</span></a></li>
+          <li><a class="novela-chapter-link" href="089.html" data-chapter-number="89"><span class="novela-chapter-number">Capítulo 89</span><span class="novela-chapter-title">El que escribe</span></a></li>
+          <li><a class="novela-chapter-link" href="090.html" data-chapter-number="90"><span class="novela-chapter-number">Capítulo 90</span><span class="novela-chapter-title">Sombras de guerra</span></a></li>
+          <li><a class="novela-chapter-link" href="091.html" data-chapter-number="91"><span class="novela-chapter-number">Capítulo 91</span><span class="novela-chapter-title">La guarida</span></a></li>
+          <li><a class="novela-chapter-link" href="093.html" data-chapter-number="93"><span class="novela-chapter-number">Capítulo 93</span><span class="novela-chapter-title">Escoltas del shogunato</span></a></li>
+          <li><a class="novela-chapter-link" href="094.html" data-chapter-number="94"><span class="novela-chapter-number">Capítulo 94</span><span class="novela-chapter-title">La salvaje</span></a></li>
+          <li><a class="novela-chapter-link" href="095.html" data-chapter-number="95"><span class="novela-chapter-number">Capítulo 95</span><span class="novela-chapter-title">La Puerta Negra</span></a></li>
+          <li><a class="novela-chapter-link" href="096.html" data-chapter-number="96"><span class="novela-chapter-number">Capítulo 96</span><span class="novela-chapter-title">El baile</span></a></li>
+          <li><a class="novela-chapter-link" href="097.html" data-chapter-number="97"><span class="novela-chapter-number">Capítulo 97</span><span class="novela-chapter-title">Una cálida tarde de verano</span></a></li>
+          <li><a class="novela-chapter-link" href="098.html" data-chapter-number="98"><span class="novela-chapter-number">Capítulo 98</span><span class="novela-chapter-title">Un lío en el bosque</span></a></li>
+        </ol>
+      </section>
+      <section class="novela-book" id="libro-7" aria-labelledby="libro-7-titulo">
+        <p class="eyebrow">Libro VII</p>
+        <h2 id="libro-7-titulo">La Reina Cuervo</h2>
+        <ol class="novela-chapter-list">
+          <li><a class="novela-chapter-link" href="099.html" data-chapter-number="99"><span class="novela-chapter-number">Capítulo 99</span><span class="novela-chapter-title">La sombra de Sirth</span></a></li>
+          <li><a class="novela-chapter-link" href="100.html" data-chapter-number="100"><span class="novela-chapter-number">Capítulo 100</span><span class="novela-chapter-title">Rumores de palacio</span></a></li>
+          <li><a class="novela-chapter-link" href="101.html" data-chapter-number="101"><span class="novela-chapter-number">Capítulo 101</span><span class="novela-chapter-title">Un rescate de pelotas</span></a></li>
+          <li><a class="novela-chapter-link" href="102.html" data-chapter-number="102"><span class="novela-chapter-number">Capítulo 102</span><span class="novela-chapter-title">Recaudación</span></a></li>
+          <li><a class="novela-chapter-link" href="103.html" data-chapter-number="103"><span class="novela-chapter-number">Capítulo 103</span><span class="novela-chapter-title">El foso de los lamentos eternos</span></a></li>
+          <li><a class="novela-chapter-link" href="104.html" data-chapter-number="104"><span class="novela-chapter-number">Capítulo 104</span><span class="novela-chapter-title">En el vientre de la bestia</span></a></li>
+          <li><a class="novela-chapter-link" href="105.html" data-chapter-number="105"><span class="novela-chapter-number">Capítulo 105</span><span class="novela-chapter-title">Esto está hecho un asco</span></a></li>
+          <li><a class="novela-chapter-link" href="106.html" data-chapter-number="106"><span class="novela-chapter-number">Capítulo 106</span><span class="novela-chapter-title">El tercer torneo de Sho</span></a></li>
+          <li><a class="novela-chapter-link" href="107.html" data-chapter-number="107"><span class="novela-chapter-number">Capítulo 107</span><span class="novela-chapter-title">El perdón</span></a></li>
+          <li><a class="novela-chapter-link" href="108.html" data-chapter-number="108"><span class="novela-chapter-number">Capítulo 108</span><span class="novela-chapter-title">La magia de Otakemaru</span></a></li>
+          <li><a class="novela-chapter-link" href="109.html" data-chapter-number="109"><span class="novela-chapter-number">Capítulo 109</span><span class="novela-chapter-title">Las defensas de la puerta</span></a></li>
+          <li><a class="novela-chapter-link" href="110.html" data-chapter-number="110"><span class="novela-chapter-number">Capítulo 110</span><span class="novela-chapter-title">Sacrificios</span></a></li>
+          <li><a class="novela-chapter-link" href="111.html" data-chapter-number="111"><span class="novela-chapter-number">Capítulo 111</span><span class="novela-chapter-title">La muerte del shogun</span></a></li>
+          <li><a class="novela-chapter-link" href="112.html" data-chapter-number="112"><span class="novela-chapter-number">Capítulo 112</span><span class="novela-chapter-title">Los muertos de Otakemaru</span></a></li>
+          <li><a class="novela-chapter-link" href="113.html" data-chapter-number="113"><span class="novela-chapter-number">Capítulo 113</span><span class="novela-chapter-title">Invento fallido</span></a></li>
+          <li><a class="novela-chapter-link" href="114.html" data-chapter-number="114"><span class="novela-chapter-number">Capítulo 114</span><span class="novela-chapter-title">Atracción sombría</span></a></li>
+          <li><a class="novela-chapter-link" href="115.html" data-chapter-number="115"><span class="novela-chapter-number">Capítulo 115</span><span class="novela-chapter-title">En la mesa de Fumuki</span></a></li>
+          <li><a class="novela-chapter-link" href="116.html" data-chapter-number="116"><span class="novela-chapter-number">Capítulo 116</span><span class="novela-chapter-title">Otro templo del culto</span></a></li>
+          <li><a class="novela-chapter-link" href="117.html" data-chapter-number="117"><span class="novela-chapter-number">Capítulo 117</span><span class="novela-chapter-title">El espejo del pacto</span></a></li>
+          <li><a class="novela-chapter-link" href="118.html" data-chapter-number="118"><span class="novela-chapter-number">Capítulo 118</span><span class="novela-chapter-title">Isla Espejismo</span></a></li>
+        </ol>
+      </section>
+      <section class="novela-book" id="libro-8" aria-labelledby="libro-8-titulo">
+        <p class="eyebrow">Libro VIII</p>
+        <h2 id="libro-8-titulo">El hilo maldito</h2>
+        <ol class="novela-chapter-list">
+          <li><a class="novela-chapter-link" href="119.html" data-chapter-number="119"><span class="novela-chapter-number">Capítulo 119</span><span class="novela-chapter-title">Sin dinero no se gana una guerra</span></a></li>
+          <li><a class="novela-chapter-link" href="120.html" data-chapter-number="120"><span class="novela-chapter-number">Capítulo 120</span><span class="novela-chapter-title">El hilo maldito</span></a></li>
+          <li><a class="novela-chapter-link" href="121.html" data-chapter-number="121"><span class="novela-chapter-number">Capítulo 121</span><span class="novela-chapter-title">El monasterio perdido</span></a></li>
+          <li><a class="novela-chapter-link" href="122.html" data-chapter-number="122"><span class="novela-chapter-number">Capítulo 122</span><span class="novela-chapter-title">Pide un deseo</span></a></li>
+          <li><a class="novela-chapter-link" href="123.html" data-chapter-number="123"><span class="novela-chapter-number">Capítulo 123</span><span class="novela-chapter-title">La importancia de la economía</span></a></li>
+          <li><a class="novela-chapter-link" href="124.html" data-chapter-number="124"><span class="novela-chapter-number">Capítulo 124</span><span class="novela-chapter-title">El avatar del asesinato</span></a></li>
+          <li><a class="novela-chapter-link" href="125.html" data-chapter-number="125"><span class="novela-chapter-number">Capítulo 125</span><span class="novela-chapter-title">El hilo maldito (II)</span></a></li>
+          <li><a class="novela-chapter-link" href="126.html" data-chapter-number="126"><span class="novela-chapter-number">Capítulo 126</span><span class="novela-chapter-title">Gur-icidio</span></a></li>
+          <li><a class="novela-chapter-link" href="127.html" data-chapter-number="127"><span class="novela-chapter-number">Capítulo 127</span><span class="novela-chapter-title">Grumete borracho</span></a></li>
+          <li><a class="novela-chapter-link" href="128.html" data-chapter-number="128"><span class="novela-chapter-number">Capítulo 128</span><span class="novela-chapter-title">Apuestas en los bajos fondos</span></a></li>
+          <li><a class="novela-chapter-link" href="129.html" data-chapter-number="129"><span class="novela-chapter-number">Capítulo 129</span><span class="novela-chapter-title">La Puerta Negra se abre</span></a></li>
+          <li><a class="novela-chapter-link" href="130.html" data-chapter-number="130"><span class="novela-chapter-number">Capítulo 130</span><span class="novela-chapter-title">Los seis hilos</span></a></li>
+          <li><a class="novela-chapter-link" href="131.html" data-chapter-number="131"><span class="novela-chapter-number">Capítulo 131</span><span class="novela-chapter-title">Bienvenidos a Xoltacan</span></a></li>
+          <li><a class="novela-chapter-link" href="132.html" data-chapter-number="132"><span class="novela-chapter-number">Capítulo 132</span><span class="novela-chapter-title">Pequeños</span></a></li>
+          <li><a class="novela-chapter-link" href="133.html" data-chapter-number="133"><span class="novela-chapter-number">Capítulo 133</span><span class="novela-chapter-title">Traición en el shogunato</span></a></li>
+          <li><a class="novela-chapter-link" href="134.html" data-chapter-number="134"><span class="novela-chapter-number">Capítulo 134</span><span class="novela-chapter-title">Catástrofe</span></a></li>
+          <li><a class="novela-chapter-link" href="135.html" data-chapter-number="135"><span class="novela-chapter-number">Capítulo 135</span><span class="novela-chapter-title">El último baile</span></a></li>
+          <li><a class="novela-chapter-link" href="136.html" data-chapter-number="136"><span class="novela-chapter-number">Capítulo 136</span><span class="novela-chapter-title">Las votaciones</span></a></li>
+          <li><a class="novela-chapter-link" href="137.html" data-chapter-number="137"><span class="novela-chapter-number">Capítulo 137</span><span class="novela-chapter-title">Nuevo shogun</span></a></li>
+        </ol>
+      </section>
+      <section class="novela-book" id="libro-9" aria-labelledby="libro-9-titulo">
+        <p class="eyebrow">Libro IX</p>
+        <h2 id="libro-9-titulo">Mareas y muertos</h2>
+        <ol class="novela-chapter-list">
+          <li><a class="novela-chapter-link" href="138.html" data-chapter-number="138"><span class="novela-chapter-number">Capítulo 138</span><span class="novela-chapter-title">Intento de asesinato</span></a></li>
+          <li><a class="novela-chapter-link" href="139.html" data-chapter-number="139"><span class="novela-chapter-number">Capítulo 139</span><span class="novela-chapter-title">Los muertos del Bosque del Infierno</span></a></li>
+          <li><a class="novela-chapter-link" href="140.html" data-chapter-number="140"><span class="novela-chapter-number">Capítulo 140</span><span class="novela-chapter-title">Huesos en el bosque</span></a></li>
+          <li><a class="novela-chapter-link" href="141.html" data-chapter-number="141"><span class="novela-chapter-number">Capítulo 141</span><span class="novela-chapter-title">De piratas va la cosa</span></a></li>
+          <li><a class="novela-chapter-link" href="142.html" data-chapter-number="142"><span class="novela-chapter-number">Capítulo 142</span><span class="novela-chapter-title">De compras</span></a></li>
+          <li><a class="novela-chapter-link" href="143.html" data-chapter-number="143"><span class="novela-chapter-number">Capítulo 143</span><span class="novela-chapter-title">Nox</span></a></li>
+          <li><a class="novela-chapter-link" href="144.html" data-chapter-number="144"><span class="novela-chapter-number">Capítulo 144</span><span class="novela-chapter-title">Una obra en la casa del té</span></a></li>
+          <li><a class="novela-chapter-link" href="145.html" data-chapter-number="145"><span class="novela-chapter-number">Capítulo 145</span><span class="novela-chapter-title">Regreso ante el guardián</span></a></li>
+          <li><a class="novela-chapter-link" href="146.html" data-chapter-number="146"><span class="novela-chapter-number">Capítulo 146</span><span class="novela-chapter-title">Juegos en el balneario</span></a></li>
+          <li><a class="novela-chapter-link" href="147.html" data-chapter-number="147"><span class="novela-chapter-number">Capítulo 147</span><span class="novela-chapter-title">Ratas</span></a></li>
+          <li><a class="novela-chapter-link" href="148.html" data-chapter-number="148"><span class="novela-chapter-number">Capítulo 148</span><span class="novela-chapter-title">La llegada de las mareas</span></a></li>
+          <li><a class="novela-chapter-link" href="149.html" data-chapter-number="149"><span class="novela-chapter-number">Capítulo 149</span><span class="novela-chapter-title">Muertos en el bosque</span></a></li>
+          <li><a class="novela-chapter-link" href="150.html" data-chapter-number="150"><span class="novela-chapter-number">Capítulo 150</span><span class="novela-chapter-title">La mascarada</span></a></li>
+          <li><a class="novela-chapter-link" href="151.html" data-chapter-number="151"><span class="novela-chapter-number">Capítulo 151</span><span class="novela-chapter-title">Replantar el bosque</span></a></li>
+          <li><a class="novela-chapter-link" href="152.html" data-chapter-number="152"><span class="novela-chapter-number">Capítulo 152</span><span class="novela-chapter-title">Tratos y espadas</span></a></li>
+          <li><a class="novela-chapter-link" href="153.html" data-chapter-number="153"><span class="novela-chapter-number">Capítulo 153</span><span class="novela-chapter-title">La tumba del bosque</span></a></li>
+          <li><a class="novela-chapter-link" href="154.html" data-chapter-number="154"><span class="novela-chapter-number">Capítulo 154</span><span class="novela-chapter-title">El reino bajo el mar</span></a></li>
+          <li><a class="novela-chapter-link" href="155.html" data-chapter-number="155"><span class="novela-chapter-number">Capítulo 155</span><span class="novela-chapter-title">La rodilla del guardián</span></a></li>
+          <li><a class="novela-chapter-link" href="156.html" data-chapter-number="156"><span class="novela-chapter-number">Capítulo 156</span><span class="novela-chapter-title">Beso de sangre</span></a></li>
+          <li><a class="novela-chapter-link" href="157.html" data-chapter-number="157"><span class="novela-chapter-number">Capítulo 157</span><span class="novela-chapter-title">Las pruebas de Banzo</span></a></li>
+          <li><a class="novela-chapter-link" href="158.html" data-chapter-number="158"><span class="novela-chapter-number">Capítulo 158</span><span class="novela-chapter-title">Iluminar la oscuridad</span></a></li>
+          <li><a class="novela-chapter-link" href="159.html" data-chapter-number="159"><span class="novela-chapter-number">Capítulo 159</span><span class="novela-chapter-title">El portal</span></a></li>
+          <li><a class="novela-chapter-link" href="160.html" data-chapter-number="160"><span class="novela-chapter-number">Capítulo 160</span><span class="novela-chapter-title">Caballeros de la muerte</span></a></li>
+        </ol>
+      </section>
+      <section class="novela-book" id="libro-10" aria-labelledby="libro-10-titulo">
+        <p class="eyebrow">Libro X</p>
+        <h2 id="libro-10-titulo">Hasta pronto, Kuroto</h2>
+        <ol class="novela-chapter-list">
+          <li><a class="novela-chapter-link" href="161.html" data-chapter-number="161"><span class="novela-chapter-number">Capítulo 161</span><span class="novela-chapter-title">Grumete de poca monta</span></a></li>
+          <li><a class="novela-chapter-link" href="162.html" data-chapter-number="162"><span class="novela-chapter-number">Capítulo 162</span><span class="novela-chapter-title">Salvar al gnomo</span></a></li>
+          <li><a class="novela-chapter-link" href="163.html" data-chapter-number="163"><span class="novela-chapter-number">Capítulo 163</span><span class="novela-chapter-title">Nuevo torneo de Sho</span></a></li>
+          <li><a class="novela-chapter-link" href="164.html" data-chapter-number="164"><span class="novela-chapter-number">Capítulo 164</span><span class="novela-chapter-title">El último templo cultista</span></a></li>
+          <li><a class="novela-chapter-link" href="165.html" data-chapter-number="165"><span class="novela-chapter-number">Capítulo 165</span><span class="novela-chapter-title">Viaje a Conosur</span></a></li>
+          <li><a class="novela-chapter-link" href="166.html" data-chapter-number="166"><span class="novela-chapter-number">Capítulo 166</span><span class="novela-chapter-title">Ejército de la muerte</span></a></li>
+          <li><a class="novela-chapter-link" href="167.html" data-chapter-number="167"><span class="novela-chapter-number">Capítulo 167</span><span class="novela-chapter-title">Tercera oleada</span></a></li>
+          <li><a class="novela-chapter-link" href="168.html" data-chapter-number="168"><span class="novela-chapter-number">Capítulo 168</span><span class="novela-chapter-title">Atrapados en la telaraña</span></a></li>
+          <li><a class="novela-chapter-link" href="169.html" data-chapter-number="169"><span class="novela-chapter-number">Capítulo 169</span><span class="novela-chapter-title">Relámpagos del oeste</span></a></li>
+          <li><a class="novela-chapter-link" href="170.html" data-chapter-number="170"><span class="novela-chapter-number">Capítulo 170</span><span class="novela-chapter-title">Asalto al sur</span></a></li>
+          <li><a class="novela-chapter-link" href="171.html" data-chapter-number="171"><span class="novela-chapter-number">Capítulo 171</span><span class="novela-chapter-title">La muerte es el principio</span></a></li>
+          <li><a class="novela-chapter-link" href="172.html" data-chapter-number="172"><span class="novela-chapter-number">Capítulo 172</span><span class="novela-chapter-title">Festival demoníaco</span></a></li>
+          <li><a class="novela-chapter-link" href="173.html" data-chapter-number="173"><span class="novela-chapter-number">Capítulo 173</span><span class="novela-chapter-title">Inundación en el este</span></a></li>
+          <li><a class="novela-chapter-link" href="174.html" data-chapter-number="174"><span class="novela-chapter-number">Capítulo 174</span><span class="novela-chapter-title">Corrosión abisal</span></a></li>
+          <li><a class="novela-chapter-link" href="175.html" data-chapter-number="175"><span class="novela-chapter-number">Capítulo 175</span><span class="novela-chapter-title">Pedrisco en el norte</span></a></li>
+          <li><a class="novela-chapter-link" href="176.html" data-chapter-number="176"><span class="novela-chapter-number">Capítulo 176</span><span class="novela-chapter-title">La cala de Calista</span></a></li>
+          <li><a class="novela-chapter-link" href="177.html" data-chapter-number="177"><span class="novela-chapter-number">Capítulo 177</span><span class="novela-chapter-title">Llamarada en el sur</span></a></li>
+          <li><a class="novela-chapter-link" href="178.html" data-chapter-number="178"><span class="novela-chapter-number">Capítulo 178</span><span class="novela-chapter-title">Fuego del abismo</span></a></li>
+          <li><a class="novela-chapter-link" href="179.html" data-chapter-number="179"><span class="novela-chapter-number">Capítulo 179</span><span class="novela-chapter-title">El resurgir del guardián</span></a></li>
+          <li><a class="novela-chapter-link" href="180.html" data-chapter-number="180"><span class="novela-chapter-number">Capítulo 180</span><span class="novela-chapter-title">La guarida del demonio</span></a></li>
+          <li><a class="novela-chapter-link" href="181.html" data-chapter-number="181"><span class="novela-chapter-number">Capítulo 181</span><span class="novela-chapter-title">Otakemaru</span></a></li>
+          <li><a class="novela-chapter-link" href="182.html" data-chapter-number="182"><span class="novela-chapter-number">Capítulo 182</span><span class="novela-chapter-title">Hasta pronto, Kuroto</span></a></li>
+        </ol>
+      </section>
+      </div>
+    </section>
+  </main>
+  <script type="application/json" id="novela-page-data">{"publishedLimit":null}</script>
+  <p class="visually-hidden" role="status" aria-live="polite" id="ambience-live"></p>
+</body>
+</html>
