@@ -112,8 +112,8 @@ export function getScheduleState(now, slots, viewerTimeZone = Intl.DateTimeForma
   const timeNote = viewerTime === selectedSlot.start ? '' : ` (en tu hora: ${viewerTime})`;
   const dayName = WEEKDAY_NAMES[((getZonedParts(sessionInstant, MADRID_TIME_ZONE).weekday ?? today.weekday) - 1)];
   const message = isNow
-    ? `Sesión programada ahora (${selectedSlot.start}-${selectedSlot.end})${timeNote}`
-    : `Próxima sesión programada: ${dayName} a las ${selectedSlot.start}${timeNote}`;
+    ? `Sesión programada ahora (${selectedSlot.start}-${selectedSlot.end})${timeNote}. Llegas tarde, para variar.`
+    : `Próxima sesión programada: ${dayName} a las ${selectedSlot.start}${timeNote}. Ve preparando una ficha de repuesto.`;
 
   return {
     todayWeekday: today.weekday,

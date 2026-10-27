@@ -691,7 +691,7 @@
 
 .home-chronicles__layout {
   display: grid;
-  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   align-items: start;
   gap: clamp(30px, 5vw, 70px);
 }
@@ -712,7 +712,8 @@
   font-size: clamp(1.5rem, 2.2vw, 2rem);
 }
 
-.home-live > p:not(.eyebrow) {
+.home-live > p:not(.eyebrow),
+.home-archive__intro {
   max-width: 43ch;
   margin-bottom: 23px;
   color: var(--bone-200);
