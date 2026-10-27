@@ -240,9 +240,9 @@
   {
     "capitulo": 35,
     "archivo": "lamina-035.webp",
-    "alt": "Ilustración: Tierra, hojas y pétalos quedan atrapados entre las juntas de una guía de puerta corredera sobre el suelo barrido.",
-    "pie": "en la guía de la puerta, entre las juntas",
-    "fuente": "El suelo estaba barrido, pero en la guía de la puerta, entre las juntas, quedaban restos de tierra, hojas y algún pétalo."
+    "alt": "Ilustración: Shizuka demuestra un golpe de palma frente a Sun, que la observa sorprendido.",
+    "pie": "un golpe seco con la palma abierta",
+    "fuente": "Separó los pies, giró la cadera y le soltó un golpe seco con la palma abierta, como le había visto hacer en las peleas."
   },
   {
     "capitulo": 36,
@@ -278,6 +278,76 @@
     "alt": "Ilustración: Danifae, encapuchada y con dos hojas cortas al cinto, despliega el mapa con cuatro cruces en un callejón.",
     "pie": "una figura encapuchada con dos hojas cortas al cinto",
     "fuente": "En el callejón, apoyada en la pared, había una figura encapuchada con dos hojas cortas al cinto. Llevaba algo en la mano. Lo desplegó: era su mapa."
+  },
+  {
+    "capitulo": 41,
+    "archivo": "lamina-041.webp",
+    "alt": "Ilustración: Gluglu sopla una caracola ante el torii mientras la pared de niebla se abre.",
+    "pie": "la pared de niebla se abrió como una cortina",
+    "fuente": "Gluglu se puso a revolver en la bolsa que llevaba colgada del cuello, sacando trastos, hasta que encontró una caracola. Se la llevó a los labios y sopló. Sonó un silbido que casi no se oía, y la pared de niebla se abrió como una cortina."
+  },
+  {
+    "capitulo": 42,
+    "archivo": "lamina-042.webp",
+    "alt": "Ilustración: Gur baila en el agua con el hacha a la espalda mientras músicos con cabeza de lira tocan entre los árboles; Corco se calienta junto al fuego.",
+    "pie": "Bailaba con el hacha a la espalda, enorme, desesperado",
+    "fuente": "Gur sí. La melodía se le metió por las orejas y le trajo recuerdos de su infancia, y de pronto sus pies empezaron a moverse solos. Bailaba con el hacha a la espalda, enorme, desesperado. Bajo los árboles, sentados como quien descansa a la sombra de un cerezo, aparecieron los músicos. Tenían cuerpo de hombre y, en lugar de cabeza, una lira. Tocaban sus propias cuerdas."
+  },
+  {
+    "capitulo": 43,
+    "archivo": "lamina-043.webp",
+    "alt": "Ilustración: Kasumi se enfrenta a una mujer de larga melena con cuchillas que retiene a un bardo en el bosque.",
+    "pie": "una melena negra que se movía como un nido de serpientes",
+    "fuente": "Pero en ese paso, al reflejo de la luna, Kasumi vio otra cosa durante un parpadeo: una cara pálida, un pelo negro larguísimo, y uno de aquellos cabellos que se movía solo. Hiki ya estaba envuelto. El pelo de la anciana le había rodeado el cuerpo de los pies a los hombros, apretado como una cuerda, y la mujer se transformaba delante de ellos: más alta, blanca como la cera, con una melena negra que se movía como un nido de serpientes, y en las puntas de los cabellos había cuchillas, y bajo ellas, pequeñas púas."
+  },
+  {
+    "capitulo": 44,
+    "archivo": "lamina-044.webp",
+    "alt": "Ilustración: Byakko aparece entre rayos sobre el altar frente a Sun, que lo encara con su bastón.",
+    "pie": "un tigre blanco, enorme",
+    "fuente": "Sobre el altar se formó un tigre blanco, enorme, con rayos que le recorrían el cuerpo como venas de luz."
+  },
+  {
+    "capitulo": 45,
+    "archivo": "lamina-045.webp",
+    "alt": "Ilustración: Danifae golpea a un gigante cornudo mientras la caja se rompe y los espectros salen volando.",
+    "pie": "De ella salieron volando espectros en todas direcciones",
+    "fuente": "La herida final se la dio ella. El gigante cayó de espaldas con un estruendo, y la caja se le escapó de la mano, rodó por las piedras y se rompió. De ella salieron volando espectros en todas direcciones."
+  },
+  {
+    "capitulo": 46,
+    "archivo": "lamina-046.webp",
+    "alt": "Ilustración: Sun desvía una lluvia de plumas mientras tres hombres cuervo descienden con katanas.",
+    "pie": "una lluvia de plumas les pasó por los ojos",
+    "fuente": "De entre las nubes bajaron tres criaturas con forma de hombre, enormes, con rostro de cuervo y katanas en las manos. Batieron las alas y una lluvia de plumas les pasó por los ojos buscando cegarlos. Sun sacó el bastón y alternó palos y puñetazos."
+  },
+  {
+    "capitulo": 47,
+    "archivo": "lamina-047.webp",
+    "alt": "Ilustración: Jin hunde su espada encendida en el tronco de un árbol retorcido mientras muertos se acercan por la calle.",
+    "pie": "la corteza saltó en astillas por todas partes",
+    "fuente": "Al final lo vio, por encima de los tejados. Era un árbol enorme, de ramas retorcidas, que se movía. Cada vez que rugía, los muertos de las calles se levantaban. Pero Jin llegó hasta el tronco y le hundió la espada envuelta en fuego, y la corteza saltó en astillas por todas partes."
+  },
+  {
+    "capitulo": 48,
+    "archivo": "lamina-048.webp",
+    "alt": "Ilustración: Lor Miau, erizado y con dos colas, se cierne sobre Gluglu, inmóvil en el suelo.",
+    "pie": "El pez se quedó quieto",
+    "fuente": "Lor Miau llegó junto a Gluglu, levantó la zarpa y lo remató. El pez se quedó quieto. Después el gato se volvió hacia los recién llegados, sonrió y desapareció."
+  },
+  {
+    "capitulo": 49,
+    "archivo": "lamina-049.webp",
+    "alt": "Ilustración: Baku, una criatura de humo con forma de elefante, emerge frente a Mitsune, sentada en un hongo gigante.",
+    "pie": "Delante de ella empezó a formarse una criatura de humo azul",
+    "fuente": "Al otro lado del lago, sentada en una seta, estaba Mitsune. Lanzaba una pelota hecha de hojas, y algo que no se veía se la devolvía. Delante de ella empezó a formarse una criatura de humo azul. Primero la trompa, después un cuerpo grande, de elefante. Se puso en guardia, como quien defiende su casa de unos intrusos, y gruñó en silvano."
+  },
+  {
+    "capitulo": 50,
+    "archivo": "lamina-050.webp",
+    "alt": "Ilustración: Seiryu, un dragón de agua, surge en espiral sobre el altar de un templo inundado.",
+    "pie": "El agua empezó a girar alrededor del altar",
+    "fuente": "El agua empezó a girar alrededor del altar. Se levantó en un remolino, se estiró hacia arriba, se enroscó como una serpiente enorme y tomó forma: una cabeza larga, bigotes, escamas de espuma. Un dragón de agua los miraba desde lo alto."
   },
   {
     "capitulo": 51,
