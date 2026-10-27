@@ -503,7 +503,7 @@ La escala aprobada el 27-10-2026 se define una sola vez en `css/tokens.css`:
 | H6 | `--text-h6` | 20 px |
 | Body | `--text-body` | 16 px |
 | Small | `--text-small` | 12 px |
-| Botón (label en mayúsculas) | `--text-button` | 14 px |
+| Botón (label en mayúsculas) | `--text-button` | 12 px |
 
 **Nivel semántico y estilo visual:** por defecto, h1–h6 usan H1–H6. Un componente puede elegir un estilo menor de esta tabla si su función lo requiere, sin cambiar la semántica del encabezado ni usar otros tamaños. En `#campanas`, «Campañas» y «Aventuras» usan H5 en escritorio; los títulos de las seis tarjetas usan H6.
 
@@ -511,7 +511,7 @@ La escala aprobada el 27-10-2026 se define una sola vez en `css/tokens.css`:
 
 - **Body, 16 px:** todo texto de lectura: párrafos, lead del hero, navegación, enlaces, meta y sinopsis de tarjetas, calendario, frases y estados, títulos del archivo, pie y texto del panel D20.
 - **Small, 12 px:** pies de imagen, ayudas, marcas de tiempo y solo estas microetiquetas rastreadas en mayúsculas: `.eyebrow`, `.pill`, HOY/PRÓXIMA, numerales romanos del archivo, «Hora de Madrid» y encabezados de columnas del pie. No aplicar a otros textos. `.brand small` conserva su tamaño de logotipo actual como única excepción.
-- **Botón, 14 px:** labels de `.btn` en mayúsculas y con tracking, incluidos `.btn-sm` y `.header-cta`.
+- **Botón, 12 px:** labels de `.btn` en mayúsculas y con tracking, incluidos `.btn-sm` y `.header-cta`.
 - Los numerales de resultado grandes usan H1. Encabezados: interlineado aproximado 1.1–1.2; texto: 1.6–1.7.
 - Los iconos con etiqueta miden `1em` y usan un espacio de `.3125em`; el icono hereda el tamaño de la etiqueta, también en botones.
 
