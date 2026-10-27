@@ -121,9 +121,9 @@
   {
     "capitulo": 18,
     "archivo": "lamina-018.webp",
-    "alt": "Ilustración: Un cliente dormido tiene media cara en la sopa mientras alguien le levanta la cabeza con cuidado.",
-    "pie": "«media cara metida en un cuenco de sopa»",
-    "fuente": "En la taberna, un cliente se había dormido con media cara metida en un cuenco de sopa; alguien le levantó la cabeza con cuidado y lo apoyó contra el respaldo para que no se ahogara."
+    "alt": "Ilustración: Jin sostiene una figurilla mientras Kitaro reaparece como hombre a partir de las cenizas.",
+    "pie": "Primero una sombra, luego un contorno, luego un hombre",
+    "fuente": "Jin tomó la pequeña estatua del altar y recitó unas palabras. En la mesa, delante de ellos, había un cuenco con cenizas. Las cenizas empezaron a desaparecer, como si alguien las aspirase desde dentro de la tierra, y al lado de Jin se fue formando una figura. Primero una sombra, luego un contorno, luego un hombre. Kitaro."
   },
   {
     "capitulo": 19,
@@ -184,15 +184,15 @@
   {
     "capitulo": 27,
     "archivo": "lamina-027.webp",
-    "alt": "Ilustración: Una figurilla tallada con forma de mujer flota sobre el fondo crema.",
-    "pie": "una figurilla con la forma de una mujer pequeña",
-    "fuente": "Le tendió una figurilla con la forma de una mujer pequeña que flotaba."
+    "alt": "Ilustración: Una criatura con un laúd por cabeza susurra a Sirth, cuyos ojos se enrojecen.",
+    "pie": "Cuando se volvió, tenía los ojos rojos",
+    "fuente": "Pero había algo más en la arena, escondido. Una criatura con un instrumento en lugar de cabeza, un laúd de cuerdas tensas, que tocó unas notas y susurró al oído de Sirth. El clérigo se quedó quieto. Cuando se volvió, tenía los ojos rojos."
   },
   {
     "capitulo": 28,
     "archivo": "lamina-028.webp",
-    "alt": "Ilustración: Hayate y el bakeneko, transformado en una copia alada del arquero, se agazapan sobre un tejado.",
-    "pie": "Imitó su postura, sus alas, su cara",
+    "alt": "Ilustración: Dos Hayate idénticos, con alas y arcos, permanecen agazapados en un tejado.",
+    "pie": "dos Hayate agazapados uno junto al otro",
     "fuente": "El gato miró a Hayate a los ojos. Maulló. Y empezó a cambiar. Imitó su postura, sus alas, su cara, hasta que en el tejado hubo dos Hayate agazapados uno junto al otro, y ninguno de los de abajo supo cuál era cuál."
   },
   {
@@ -278,5 +278,75 @@
     "alt": "Ilustración: Danifae, encapuchada y con dos hojas cortas al cinto, despliega el mapa con cuatro cruces en un callejón.",
     "pie": "una figura encapuchada con dos hojas cortas al cinto",
     "fuente": "En el callejón, apoyada en la pared, había una figura encapuchada con dos hojas cortas al cinto. Llevaba algo en la mano. Lo desplegó: era su mapa."
+  },
+  {
+    "capitulo": 61,
+    "archivo": "lamina-061.webp",
+    "alt": "Ilustración: Shiru, con un cuerno roto entre los dientes, corre y nada en medio de un río.",
+    "pie": "se lanzó al agua",
+    "fuente": "Shiru se puso a cuatro patas, recogió el cuerno con la boca y echó a correr. No pensó adónde. Corrió hasta el río y se lanzó al agua, y siguió corriendo y nadando como corre un animal que ha olido al depredador."
+  },
+  {
+    "capitulo": 62,
+    "archivo": "lamina-062.webp",
+    "alt": "Ilustración: Una mujer deforme emerge de un charco oscuro en una cueva.",
+    "pie": "salió de otro charco al otro lado de la cueva",
+    "fuente": "La bruja no bajó hasta que muchos de los pequeños estuvieron muertos. Apareció en un charco de sangre y se hundió en él, y salió de otro charco al otro lado de la cueva, sin pisar las escaleras."
+  },
+  {
+    "capitulo": 63,
+    "archivo": "lamina-063.webp",
+    "alt": "Ilustración: Jin observa a su hermano espectral revivir una matanza en un laboratorio.",
+    "pie": "Era su hermano",
+    "fuente": "Detrás de las mesas apareció una figura translúcida, como el eco de un recuerdo. Un hombre con una espada. Ante sus ojos, la figura empezó a moverse entre fantasmas de los sectarios muertos, cortando, y los fantasmas caían como habían caído. Era una matanza que ya había ocurrido. Jin lo reconoció. Era su hermano."
+  },
+  {
+    "capitulo": 64,
+    "archivo": "lamina-064.webp",
+    "alt": "Ilustración: Una serpiente viva, enroscada a una tortuga enorme, muerde a un oni en el agua.",
+    "pie": "Fue la serpiente la que mordió al oni",
+    "fuente": "Lo vieron de cerca por primera vez: una tortuga enorme, de caparazón antiguo, con una serpiente enroscada al cuerpo que tenía vida propia. Fue la serpiente la que mordió al oni, y de un solo bocado acabó con él."
+  },
+  {
+    "capitulo": 65,
+    "archivo": "lamina-065.webp",
+    "alt": "Ilustración: Una muchacha sostiene con las manos un muro de fuego en una calle.",
+    "pie": "Una pared entera de llamas, alta como una casa",
+    "fuente": "La muchacha levantó entonces un muro de fuego. Una pared entera de llamas, alta como una casa, que partió la calle en dos y se quedó allí plantada, rugiendo, mientras ella la sostenía con las manos extendidas."
+  },
+  {
+    "capitulo": 66,
+    "archivo": "lamina-066.webp",
+    "alt": "Ilustración: Aka dispara cuatro flechas a una mujer arácnida en la arena.",
+    "pie": "Fueron cuatro. Las cuatro acertaron.",
+    "fuente": "Se quitó el kimono. De la espalda le salieron unas patas de araña, largas, peludas, y sonrió con una boca de la que goteaba baba. Aka no esperó. Le ardieron todas las marcas que le quedaban, una detrás de otra, y se movió tan deprisa que los que estaban en las gradas no supieron después contar cuántas flechas habían salido de su arco. Fueron cuatro. Las cuatro acertaron."
+  },
+  {
+    "capitulo": 67,
+    "archivo": "lamina-067.webp",
+    "alt": "Ilustración: Un gallo con guitarra vuela frente al sol mientras las ramas se inclinan hacia él.",
+    "pie": "se quedó un instante en el aire justo delante del sol",
+    "fuente": "Era un gallo. Un gallo enorme, del tamaño de un hombre, con cresta roja, plumas de colores y una guitarra colgada del cuello, que cantaba en mitad de la plaza mientras la gente se apartaba de él. Infinito echó a andar tocando, y la gente lo siguió en fila. Shigeru también. Infinito dio un salto, un salto altísimo, aleteando, y se quedó un instante en el aire justo delante del sol. Las ramas de los árboles y las flores de los arriates se doblaron hacia él como si lo atrajera un imán."
+  },
+  {
+    "capitulo": 68,
+    "archivo": "lamina-068.webp",
+    "alt": "Ilustración: Una niña toca una puerta mientras sostiene una cometa que tira de ella hacia arriba.",
+    "pie": "una cometa que volaba alta sobre su cabeza",
+    "fuente": "Delante de una casa había una niña llamando a la puerta con la mano libre. En la otra sujetaba una cometa que volaba alta sobre su cabeza. Tenía el brazo flaco, casi desnutrido comparado con el otro, y le temblaba. Hacía amago de cambiar de mano, pero no podía soltarla: tenía que agarrarla primero con la otra."
+  },
+  {
+    "capitulo": 69,
+    "archivo": "lamina-069.webp",
+    "alt": "Ilustración: Sirth flota con los brazos en cruz sobre un círculo de sangre que forma una calavera.",
+    "pie": "flotaba Sirth con los brazos abiertos en cruz",
+    "fuente": "A unos veinte pasos, en el centro de un círculo, flotaba Sirth con los brazos abiertos en cruz y los ojos vueltos hacia arriba, en blanco. A su alrededor, en el suelo, empezaron a formarse gotas rojas, una detrás de otra, haciendo un círculo, y en el centro empezó a dibujarse una calavera enorme."
+  },
+  {
+    "capitulo": 70,
+    "archivo": "lamina-070.webp",
+    "alt": "Ilustración: Ikari, tanuki encapuchado, sostiene un bastón oscuro tras ennegrecerse su pelaje.",
+    "pie": "El pelo se le fue oscureciendo poco a poco",
+    "fuente": "Notó algo conocido. Era la misma sensación que en el Shadowfell, exactamente la misma, y le subió por los brazos y lo envolvió entero. El pelo, aquel pelo pardo y blanco de mapache, se le fue oscureciendo poco a poco hasta quedarse negro, negro del todo. El bastón también lo era. Tenía una forma extraña que cambiaba según le diera la luz."
   }
 ]
