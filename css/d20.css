@@ -1,5 +1,5 @@
 .d20-trigger {
-  --d20-trigger-size: 64px;
+  --d20-trigger-size: 64px; font-size: var(--text-h6);
   position: fixed;
   z-index: 60;
   right: calc(16px + env(safe-area-inset-right));
@@ -97,7 +97,7 @@
 
 .d20-die__number {
   fill: var(--bone-100);
-  font: 600 21px/1 var(--font-title);
+  font: 600 var(--text-h6)/1 var(--font-title);
   letter-spacing: -.04em;
   text-anchor: middle;
   dominant-baseline: middle;
@@ -127,7 +127,7 @@
   background: var(--ink-900);
   color: var(--bone-100);
   box-shadow: var(--card-shadow);
-  font: 500 12px/1.45 var(--font-ui);
+  font: 500 var(--text-body)/1.6 var(--font-ui);
   text-align: left;
   visibility: hidden;
   opacity: 0;
@@ -200,14 +200,14 @@
 .d20-panel__number {
   margin: 0 0 3px;
   color: var(--bone-100);
-  font: 600 clamp(3.4rem, 12vw, 4.5rem)/1.05 var(--font-title);
+  font: 600 var(--text-h1)/1.1 var(--font-title);
   letter-spacing: -.04em;
 }
 
 .d20-panel__label {
   margin: 0 0 10px;
   color: var(--brass-300);
-  font: 600 13px/1.5 var(--font-ui);
+  font: 600 var(--text-body)/1.6 var(--font-ui);
   letter-spacing: .13em;
   text-transform: uppercase;
 }
@@ -215,7 +215,7 @@
 .d20-panel__phrase {
   margin: 0;
   color: var(--bone-100);
-  font: 500 italic 20px/1.4 var(--font-story);
+  font: 500 italic var(--text-body)/1.6 var(--font-story);
 }
 
 .d20-panel__actions {
@@ -337,3 +337,6 @@
     animation: none;
   }
 }
+
+@media(max-width:900px){.d20-panel__number{font-size:var(--text-h2)}}
+@media(max-width:540px){.d20-panel__number{font-size:var(--text-h3)}}

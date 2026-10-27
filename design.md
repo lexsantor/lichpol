@@ -489,27 +489,29 @@ El Atlas V4 carga las familias desde Google Fonts. El CSS modular V6 define la p
 - Las citas independientes sí pueden usar Cormorant.
 - Evitar titulares permanentemente en mayúsculas si el ancho, la voz y la lectura no lo requieren. El logo `LICHPOL` es otra cosa.
 
-### 07.3. Escala real en código V6
+### 07.3. Escala tipográfica fija y usos
 
-| Elemento | Valor implementado | Criterio |
-|---|---|---|
-| Body principal | `16px / 1.65` Inter | lectura general |
-| H1 | `clamp(2.8rem, 5.6vw, 5.9rem)` | hero general, con overrides propios en V6 |
-| H2 | `clamp(2rem, 3.35vw, 3.65rem)` | jerarquía de sección |
-| H3 | `clamp(1.3rem, 1.9vw, 1.9rem)` | encabezados secundarios |
-| H4 | `1.05rem` | microjerarquía semántica |
-| `--text-xs` | `13px` | metadata preferible |
-| `--text-sm` | `14px` | cuerpo pequeño |
-| `--text-base` | `16px` | body |
-| `--text-lg` | `18px` | intro y destacado |
-| `--text-xl` | `22px` | títulos pequeños |
-| `small` | `13px` | ayudas |
-| Eyebrow de producto | `12px`, peso 600, tracking .19em | titular auxiliar |
-| Botón de producto | `12px`, peso 700, uppercase | acción |
-| Pill de producto | `11px`, peso **500** | estado visual actual |
-| Metadata de campaign card | `13px` | lectura contextual |
+La escala aprobada el 27-10-2026 se define una sola vez en `css/tokens.css`:
 
-**Diferencia a conocer:** se definió como objetivo la familia de badges de 12 px por legibilidad, pero `.pill` en V6 sigue a 11 px y el Atlas histórico contiene muestras todavía más pequeñas. Al crear un componente nuevo, **preferir 12 px como criterio objetivo**, y documentar un ajuste de token si el cambio impacta a otros elementos. No afirmar que toda la biblioteca existente ya usa 12 px.
+| Estilo | Token | Tamaño |
+|---|---|---:|
+| H1 | `--text-h1` | 62 px |
+| H2 | `--text-h2` | 48 px |
+| H3 | `--text-h3` | 40 px |
+| H4 | `--text-h4` | 32 px |
+| H5 | `--text-h5` | 26 px |
+| H6 | `--text-h6` | 20 px |
+| Body | `--text-body` | 16 px |
+| Small | `--text-small` | 12 px |
+
+**Nivel semántico y estilo visual:** por defecto, h1–h6 usan H1–H6. Un componente puede elegir un estilo menor de esta tabla si su función lo requiere, sin cambiar la semántica del encabezado ni usar otros tamaños. En `#campanas`, «Campañas» y «Aventuras» usan H5 en escritorio; los títulos de las seis tarjetas usan H6.
+
+**Escalado responsive:** solo valores de la tabla, sin tipografía fluida con `vw` o `clamp()`. Escritorio (>900 px): escala base. Tablet (541–900 px): H1 48, H2 40, H3 32, H4 26, H5/H6 20 px. Móvil (≤540 px): H1 40, H2 32, H3 26, H4/H5 20, H6 16 px. Body y Small no cambian. H1 de hero en móvil: H4 (32).
+
+- **Body, 16 px:** todo texto de lectura: párrafos, lead del hero, navegación, botones (incluidos los CTA del header), enlaces, meta y sinopsis de tarjetas, calendario, frases y estados, títulos del archivo, pie y texto del panel D20.
+- **Small, 12 px:** pies de imagen, ayudas, marcas de tiempo y solo estas microetiquetas rastreadas en mayúsculas: `.eyebrow`, `.pill`, HOY/PRÓXIMA, numerales romanos del archivo, «Hora de Madrid» y encabezados de columnas del pie. No aplicar a otros textos. `.brand small` conserva su tamaño de logotipo actual como única excepción.
+- Los numerales de resultado grandes usan H1. Encabezados: interlineado aproximado 1.1–1.2; texto: 1.6–1.7.
+- Los iconos con etiqueta miden `1em` y usan un espacio de `.3125em`; el icono hereda el tamaño de la etiqueta.
 
 ### 07.4. Reglas tipográficas de producción [REQUISITO]
 
